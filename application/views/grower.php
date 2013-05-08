@@ -1,0 +1,1 @@
+<?php echo $full_name; ?>

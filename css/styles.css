@@ -1,0 +1,112 @@
+
+/* UNIVERSAL STYLES */
+
+body { 
+	margin: 0; padding: 0; 
+	background-image: url('../artwork/worn-background.jpg');
+	background-position: center top; background-repeat: repeat-y;
+}
+
+p { font-family: georgia, times, serif;	line-height: 140% } 
+strong { font-weight: 700; }
+
+.absolute { position: absolute; }
+.relative { position: relative; }
+
+.inner { width: 970px; margin: 0 auto; }
+
+.left { float: left; }
+.right { float: right; }
+
+.w50 { width: 49%; }
+
+a { color: #2f4ea5; }
+a:hover { text-decoration: none; }
+
+.light-blue { color: #5783ff; }
+.dark-blue { color: #2f4ea5; }
+.light-blue-background { background-color: #5783ff; }
+.dark-blue-background { background-color: #2f4ea5; }
+.red { color: red; }
+.grey { color: #999; }
+
+.francois { font-family: 'Francois One', sans-serif; }
+.yanone { font-family: 'Yanone Kaffeesatz', sans-serif; }
+
+
+/* PADDING AND MARGIN STYLES */
+
+.p10 { padding: 10px; }
+
+/* HEADER STYLE AREA */
+
+.header {}
+.header img { padding: 40px 0 0 40px; }
+
+.social-icons div.right { padding-right: 30px; }
+ 
+
+
+
+
+ /* NAVIGATION STYLE AREA */
+
+div.navigation { background-color: black; margin-top: 10px; }
+div.navlinks a {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: white;
+	line-height: 50px;
+	padding: 0px 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-right: 1px solid white;
+}
+div.navlinks a:nth-child(7) { border-right: none; }
+div.navlinks a:nth-child(8) { border-right: none; margin-left: 40px; padding: 5px 20px; font-weight: 700;}
+div.navlinks a:hover { text-decoration: underline; }
+div.navlinks a:nth-child(8):hover { text-decoration: none; }
+
+
+.button {
+	background-color: #2f4ea5;
+	border-radius: 5px;
+	box-shadow: rgba(255, 255, 255, 0.496094) 0px 1px 2px 0px inset, rgba(0, 0, 0, 0.199219) 0px 1px 0px 0px;
+	color: white;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 15px 20px;
+	margin: 0 10px;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+}
+a.button:hover { 
+	background-color: #5783ff;
+}
+
+
+
+/*  FOOTER STYLE AREA */
+
+.footer {
+	background-color: black;
+	color: white;
+	padding: 40px 0;
+}
+.footer .column {
+	float: left;
+	width: 300px;
+	padding-right: 20px;
+}
+.footer .column p {
+	font-family: georgia, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 160%;
+	padding: 20px 0;
+}
+.footer a {
+	color: white;
+}
+
