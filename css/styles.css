@@ -7,7 +7,7 @@ body {
 	background-position: center top; background-repeat: repeat-y;
 }
 
-p { font-family: georgia, times, serif;	line-height: 140% } 
+p { font-family: georgia, times, serif;	line-height: 160%; font-size: 15px; }
 strong { font-weight: 700; }
 
 .absolute { position: absolute; }
@@ -63,7 +63,7 @@ div.navlinks a {
 	border-right: 1px solid white;
 }
 div.navlinks a:nth-child(7) { border-right: none; }
-div.navlinks a:nth-child(8) { border-right: none; margin-left: 40px; padding: 5px 20px; font-weight: 700;}
+div.navlinks a:nth-child(8) { border-right: none; margin-left: 40px; padding: 5px 20px; text-decoration: none; }
 div.navlinks a:hover { text-decoration: underline; }
 div.navlinks a:nth-child(8):hover { text-decoration: none; }
 
@@ -85,6 +85,38 @@ div.navlinks a:nth-child(8):hover { text-decoration: none; }
 a.button:hover { 
 	background-color: #5783ff;
 }
+
+
+
+h1 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 40px;
+	color: red;
+	padding-bottom: 20px;
+}
+
+p.sub-head {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 32px; color: red; padding-bottom: 10px;
+}
+
+div.new-section { margin: 10px 0; }
+
+/*  GROWER PAGE STYLES */
+
+.grower-page .sidebar { width: 210px; float: left; }
+.grower-page .main-content { width: 720px; float: right; }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

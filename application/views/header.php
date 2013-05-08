@@ -2,11 +2,10 @@
 <html>
 <head>
 	
-	<title>Grow for the Cure : <?php echo $full_name ?></title>
+	<title><?php echo $page_title ?></title>
 	
 	<meta charset="UTF-8">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
+	<meta name="description" content="<?php echo $page_description; ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<link rel="stylesheet" href="/css/reset.css">
@@ -16,7 +15,7 @@
 
 </head>
 
-<body class="ADD SPECIFIC BODY CLASS">
+<body class="<?php echo $body_class; ?>">
 
 <div class="header inner">
 	<img src="/artwork/header-donate-button.png" alt="Grow for the Cure. Funy Hair. Serious Cause. Donate Now." />
@@ -46,5 +45,7 @@
 			</div>
 		</div>
 </div>
+
+<br clear="all" />
 
 <div class="inner p10"> <!-- START CLASS INNER. ENDS IN FOOTER. -->

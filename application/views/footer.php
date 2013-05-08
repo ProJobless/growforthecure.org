@@ -1,5 +1,8 @@
 </div> <!--  END CLASS INNER FROM HEADER -->
 
+<br clear="all" />
+
+
 <div class="footer">
 	<div class="inner">
 			<div class="column">
