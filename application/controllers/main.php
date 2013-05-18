@@ -17,6 +17,8 @@ class Main extends CI_Controller {
 			$data['copy'] = $copy->introCopy;
 		}
 
+		$data['styles'] = $this->model_page_data->get_style_icons(11);
+
 
 		$data['page_title'] = "Grow for the Cure : Funny Hair. Serious Cause.";
 		$data['page_description'] = "Grow for the Cure is XXXXXXXX";

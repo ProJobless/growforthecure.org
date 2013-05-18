@@ -33,7 +33,6 @@ a:hover { text-decoration: none; }
 .francois { font-family: 'Francois One', sans-serif; }
 .yanone { font-family: 'Yanone Kaffeesatz', sans-serif; }
 
-
 /* PADDING AND MARGIN STYLES */
 
 .p10 { padding: 10px; }
@@ -102,19 +101,73 @@ p.sub-head {
 
 div.new-section { margin: 10px 0; }
 
+
+/* FRONT PAGE STYLES */
+.front-page .image-row {
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+.front-page .image-row img {
+	padding-right: 30px;
+	width: 55px;
+}
+.front-page .tagline {
+	text-align: center;
+	margin-bottom: 60px;
+}
+.front-page p {
+	font-size: 18px;
+	line-height: 200%;
+	padding: 0 40px;
+}
+
+
+
 /*  GROWER PAGE STYLES */
 
 .grower-page .sidebar { width: 210px; float: left; }
 .grower-page .main-content { width: 720px; float: right; }
 
+.grower-page .members { width: 210px; float: left; }
 
 
 
 
 
+/* REGISTRATION PAGE */
 
+.registration-page .registration_form table {
+	font-family: georgia, times, serif;	
+	font-size: 16px;
+	line-height: 140%;
+	width: 80%;
+	margin-left: 5%;
+}
+.registration-page .registration_form td:nth-child(1) {
+	width: 50%;
+	padding: 10px;
+}
+.registration-page .registration_form td:nth-child(2) {
+}
 
-
+.registration-page .registration_form input[type='text'] {
+	width: 90%;
+	font-family: georgia, times, serif;	
+	font-size: 16px;
+	padding: 8px;
+}
+.registration-page .registration_form input[type='submit'] {
+	margin-right: 5%;
+	width: 150px;
+	float: right;
+	background-color: #333;
+	color: white;
+	font-size: 14px;
+	padding: 10px;
+	margin-top: 20px;
+}
+.registration-page div.error { color: red; font-weight: 700; }
 
 
 

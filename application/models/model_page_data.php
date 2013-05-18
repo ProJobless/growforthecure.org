@@ -22,4 +22,18 @@ class Model_page_data extends CI_Model {
 
 	}
 
+	function get_style_icons($n)
+	{
+		$this->db->order_by("styleName", "random"); 
+		$this->db->limit($n);
+		$query = $this->db->get('tblStyles');
+		
+			if ($query->num_rows() > 0) {
+				return $query->result();
+			} else {
+				redirect(base_url('no-styles'), 'refresh');
+			}
+	}
+
+
 }

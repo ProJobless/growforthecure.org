@@ -41,7 +41,7 @@
 				<a href="/hall-of-fame/">Hall of Fame</a>
 				<a href="/shop/">Shop</a>
 				<a href="/about/">About</a>
-				<a class="button" href="register.php">Register Now / Log In</a>
+				<a class="button" href="/register/">Register Now / Log In</a>
 			</div>
 		</div>
 </div>

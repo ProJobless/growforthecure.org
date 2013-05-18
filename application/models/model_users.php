@@ -59,6 +59,73 @@ class Model_users extends CI_Model {
 		}
 	}
 
+	function get_all_team_members($teamid)
+	{
+
+		$this->db->select('*');
+		$this->db->where('teamID', $teamid);
+		$this->db->from('tblTeamMembers');
+		$this->db->join('tblUsers', 'tblTeamMembers.growerID = tblUsers.userID');
+		$this->db->order_by('userID');
+
+		$query = $this->db->get();
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			redirect(base_url('who'), 'refresh');
+		}
+
+	}
+
+	function get_campaign_info($id)
+	{
+		$this->load->helper('date');
+	
+		$this->db->where('endDate <', now());
+		$this->db->where('growerID', $id);
+
+		$query = $this->db->get('tblCampaigns');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			redirect(base_url('who'), 'refresh');
+		}
+
+
+	}
+
+	function get_team_from_code($code)
+	{
+	
+		$this->db->where('teamCode', $code);
+		$query = $this->db->get('tblTeams');
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			$team = 'Error';
+		}
+
+	}
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
