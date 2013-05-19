@@ -21,7 +21,7 @@ class Main extends CI_Controller {
 
 
 		$data['page_title'] = "Grow for the Cure : Funny Hair. Serious Cause.";
-		$data['page_description'] = "Grow for the Cure is XXXXXXXX";
+		$data['page_description'] = "Grow for the Cure is a charity that works with the Bonnie J. Addario Lung Cancer Foundation. We try to make raising money fun. Register to become a grower, or pledge to support an existing one.";
 		$data['body_class'] = "front-page";
 
 		$this->load->view('header', $data);

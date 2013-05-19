@@ -48,4 +48,3 @@
 
 <br clear="all" />
 
-<div class="inner p10"> <!-- START CLASS INNER. ENDS IN FOOTER. -->

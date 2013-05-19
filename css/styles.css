@@ -116,11 +116,39 @@ div.new-section { margin: 10px 0; }
 	text-align: center;
 	margin-bottom: 60px;
 }
-.front-page p {
+.front-page .description p {
 	font-size: 18px;
 	line-height: 200%;
-	padding: 0 40px;
+	width: 960px;
+	margin: 0 auto 60px;
 }
+.front-page .donations-where {
+	background-color: #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 40px 0;
+	margin-bottom: 30px;
+}
+.front-page .donations-where .donation-head {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	float: left;
+	width: 250px;
+	color: red;
+	font-size: 48px;
+	text-transform: uppercase;
+	line-height: 100%;
+}
+.front-page .donations-where .donation-desc {
+	float: right;
+	width: 700px;
+	font-size: 18px;
+	line-height: 200%;
+}
+.front-page .donations-where .donation-desc img {
+	padding-left: 20px;
+}
+
+
 
 
 
