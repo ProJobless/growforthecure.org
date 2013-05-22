@@ -83,6 +83,7 @@ class Model_users extends CI_Model {
 		$this->load->helper('date');
 	
 		$this->db->where('endDate <', now());
+		$this->db->where('current = 1');
 		$this->db->where('growerID', $id);
 
 		$query = $this->db->get('tblCampaigns');
@@ -110,6 +111,36 @@ class Model_users extends CI_Model {
 
 	}
 
+	function update_user_style($s, $c, $u, $insdel)
+	{
+		if ($insdel == 'ins') {
+			$this->db->set('userID', $u);
+			$this->db->set('campaignID', $c);
+			$this->db->set('styleID', $s);
+			$this->db->insert('tblUserStyles'); 
+		}
+
+		if ($insdel == 'del') {
+			$this->db->where('userID', $u);
+			$this->db->where('campaignID', $c);
+			$this->db->where('styleID', $s);
+			$this->db->delete('tblUserStyles'); 
+		}		
+
+	}
+
+	function get_active_styles($c, $u)
+	{
+		$this->db->where('userID', $u);
+		$this->db->where('campaignID', $c);
+		$query = $this->db->get('tblUserStyles');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+	}
 
 }
 

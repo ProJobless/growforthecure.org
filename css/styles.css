@@ -5,10 +5,16 @@ body {
 	margin: 0; padding: 0; 
 	background-image: url('../artwork/worn-background.jpg');
 	background-position: center top; background-repeat: repeat-y;
+	font-family: georgia, times, serif;
 }
 
-p { font-family: georgia, times, serif;	line-height: 160%; font-size: 15px; }
+p { line-height: 160%; font-size: 15px; }
 strong { font-weight: 700; }
+
+
+#Image-Maps_2201305191435081 area, #Image-Maps_22013051914350812 area {
+outline:none;
+}
 
 .absolute { position: absolute; }
 .relative { position: relative; }
@@ -122,6 +128,10 @@ div.new-section { margin: 10px 0; }
 	width: 960px;
 	margin: 0 auto 60px;
 }
+.front-page div.right-now {
+	text-align: center;
+	margin-bottom: 50px;
+}
 .front-page .donations-where {
 	background-color: #ccc;
 	border-top: 1px solid #ccc;
@@ -166,7 +176,6 @@ div.new-section { margin: 10px 0; }
 /* REGISTRATION PAGE */
 
 .registration-page .registration_form table {
-	font-family: georgia, times, serif;	
 	font-size: 16px;
 	line-height: 140%;
 	width: 80%;
@@ -181,7 +190,6 @@ div.new-section { margin: 10px 0; }
 
 .registration-page .registration_form input[type='text'] {
 	width: 90%;
-	font-family: georgia, times, serif;	
 	font-size: 16px;
 	padding: 8px;
 }
@@ -196,6 +204,55 @@ div.new-section { margin: 10px 0; }
 	margin-top: 20px;
 }
 .registration-page div.error { color: red; font-weight: 700; }
+
+/*  PROFILE PAGE STYLES */
+
+.profile-page .contact-info {
+	float: left;
+	width: 600px;
+}
+.profile-page .calendar-area {
+	float: right;
+	width: 350px;
+}
+.profile-page .contact-info td {
+	padding: 5px;
+	vertical-align: top;
+}
+.profile-page .contact-info td input[type='text'], .profile-page .contact-info td textarea, .calendar-area input {
+	width: 95%;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.profile-page .image-row .icon {
+	float: left;
+	padding: 4px 4px 2px 4px;
+	margin: 4px 4px 0px 4px;
+}
+.profile-page .image-row .icon img {
+	width: 49px;
+}
+.profile-page .registration_form input[type='submit'] {
+	margin-right: 5%;
+	width: 150px;
+	float: right;
+	background-color: #ccc;
+	color: black;
+	font-size: 14px;
+	padding: 10px;
+	margin-top: 20px;
+}
+.profile-page .styleBG {
+	background-color: #cfcfcf;
+	border: 1px solid black;
+}
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,5 @@
+<div class="inner">
+
 <h1>Now you can do your part. Become a grower.</h1>
 
 <p class="sub-head">Let's just start with your basic contact information first.</p>
@@ -55,3 +57,4 @@ echo form_open('register', $attributes);
 	</tr>
 </table>
 
+</div>

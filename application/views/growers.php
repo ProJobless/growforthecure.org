@@ -1,3 +1,5 @@
+<div class="inner">
+
 <h1>Meet the Growers</h1>
 
 <?php 
@@ -7,3 +9,7 @@
 	}
 
 ?>
+
+
+
+</div>

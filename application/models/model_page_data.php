@@ -22,9 +22,10 @@ class Model_page_data extends CI_Model {
 
 	}
 
-	function get_style_icons($n)
+	function get_style_icons($n, $o)
+	// n = NUMBER o = RANDOM/ASC/DESC
 	{
-		$this->db->order_by("styleName", "random"); 
+		$this->db->order_by("styleName", $o); 
 		$this->db->limit($n);
 		$query = $this->db->get('tblStyles');
 		

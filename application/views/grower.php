@@ -1,3 +1,5 @@
+<div class="inner">
+
 <h1><?php echo $full_name; ?> - Member of Team <?php echo $team_name ?></h1>
 <div class="social-like-bar">
 	facebook, twitter, linkdin, google+
@@ -77,5 +79,9 @@
 
 <br clear="all" />
 <br clear="all" />
+
+</div>
+
+
 
 </div>

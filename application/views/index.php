@@ -15,6 +15,17 @@
 	<p><?php echo $copy; ?> <a href="/about/">Read more...</a></p>
 </div>
 
+
+<div class="right-now">
+	<img id="Image-Maps_2201305191435081" src="/artwork/right-now.png" usemap="#Image-Maps_2201305191435081" border="0" width="520" height="62" alt="" style="outline:none;" />
+	<map id="Image-Maps_2201305191435081" name="Image-Maps_2201305191435081">
+	<area shape="rect" coords="302,0,422,57" href="/donate" alt="Donate Now" title="Donate Now" />
+	<area shape="rect" coords="423,0,515,57" href="/register" alt="Register as a Grower" title="Register as a Grower" />
+</map>
+</div>
+
+
+
 <div class="donations-where">
 	<div class="inner">
 	
@@ -26,3 +37,6 @@
 	</div>
 </div>
 
+
+</div>
+            

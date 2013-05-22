@@ -63,7 +63,7 @@ function index()
 			}
 
 
-            print $firstname . '<br/>' . $lastname . '<br/>' . $email. '<br/>' . $password1 . '<br/>' . $password2 . '<br />' . $enddate . '<br />Team: ' . $team;
+      //      print $firstname . '<br/>' . $lastname . '<br/>' . $email. '<br/>' . $password1 . '<br/>' . $password2 . '<br />' . $enddate . '<br />Team: ' . $team;
 
 			$this->db->set('firstName', $firstname);
 			$this->db->set('lastName', $lastname);
@@ -119,7 +119,7 @@ function index()
 			$this->db->set('endDate', $enddate);
 			$this->db->insert('tblCampaigns');
 
-			$this->load->view('formsuccess');
+			redirect('/profile/'.$userID, 'refresh');
 		}
 	}
 

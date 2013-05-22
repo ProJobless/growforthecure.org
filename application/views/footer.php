@@ -24,6 +24,8 @@
 	</div>
 </div>
 
+	<script src="/scripts/jquery.custom.js"></script>
+
 
 </body>
 </html>
