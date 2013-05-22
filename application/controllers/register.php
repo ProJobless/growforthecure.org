@@ -117,6 +117,7 @@ function index()
 			$this->db->set('teamID', $teamID);
 			$this->db->set('startDate', date("Y-m-d"));
 			$this->db->set('endDate', $enddate);
+			$this->db->set('current', 1);
 			$this->db->insert('tblCampaigns');
 
 			redirect('/profile/'.$userID, 'refresh');

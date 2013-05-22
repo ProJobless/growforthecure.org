@@ -241,3 +241,9 @@ ERROR - 2013-05-22 15:27:54 --> Severity: Warning  --> Invalid argument supplied
 ERROR - 2013-05-22 15:28:07 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
 ERROR - 2013-05-22 15:28:08 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
 ERROR - 2013-05-22 15:28:13 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-22 15:33:26 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-22 15:33:42 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-22 15:33:55 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-22 15:34:16 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-22 15:34:40 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-22 15:34:40 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
