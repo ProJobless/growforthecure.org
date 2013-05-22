@@ -63,7 +63,7 @@
 		foreach ($teammembers as $member) {
 
 			if ($member->profilePic) {
-				$photo = '<img src="/userphotos/' . $member->profilePic . '" width="200px" />';
+				$photo = '<img src="' . base_url() . 'userphotos/' . $member->profilePic . '" width="200px" />';
 			} else {
 				$photo = '<img src="http://placehold.it/200x200&text=NoProfilePhoto" />';
 			}
