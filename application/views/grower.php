@@ -14,7 +14,7 @@
 <div class="sidebar">
 <?php 
 	if ($profile_pic) {
-		$photo = '<img src="/userphotos/' . $profile_pic . '" width="200px" />';
+		$photo = '<img src="' . base_url() . 'userphotos/' . $profile_pic . '" width="200px" />';
 	} else {
 		$photo = '<img src="http://placehold.it/200x200&text=No+Profile+Photo" />';
 	}
@@ -70,7 +70,7 @@
 
 			?>
 			<div class="members">
-				<p><a href="/grower/<?php echo $member->userID; ?>/<?php echo  strtolower($member->firstName) . '-' . strtolower($member->lastName) ?>/"><?php echo $member->firstName . ' ' . $member->lastName; ?></a></p>
+				<p><a href="<?php echo base_url(); ?>grower/<?php echo $member->userID; ?>/<?php echo  strtolower($member->firstName) . '-' . strtolower($member->lastName) ?>/"><?php echo $member->firstName . ' ' . $member->lastName; ?></a></p>
 				<?php echo $photo; ?>
 			</div>
 
