@@ -8,8 +8,8 @@
 	<meta name="description" content="<?php echo $page_description; ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -20,9 +20,9 @@
 <body class="<?php echo $body_class; ?>">
 
 <div class="header inner">
-<img id="Image-Maps_22013051914350812" src="/artwork/header-donate-button.png" usemap="#Image-Maps_22013051914350812" border="0" width="610" height="152" alt="" />
+<img id="Image-Maps_22013051914350812" src="<?php echo base_url(); ?>artwork/header-donate-button.png" usemap="#Image-Maps_22013051914350812" border="0" width="610" height="152" alt="" />
 <map id="Image-Maps_22013051914350812" name="Image-Maps_22013051914350812">
-<area shape="rect" coords="457,97,605,147" href="/donate" alt="Make a donation." title="Make a donation." />
+<area shape="rect" coords="457,97,605,147" href="<?php echo base_url(); ?>donate" alt="Make a donation." title="Make a donation." />
 </map>
 </div>
             
@@ -32,9 +32,9 @@
 
 <div class="social-icons inner">
 	<div class="right">
-		<a href=""><img width="40px" src="/artwork/facebook.png" /></a>
-		<a href=""><img width="40px" src="/artwork/twitter.png" /></a>
-		<a href=""><img width="40px" src="/artwork/mail.png" /></a>
+		<a href=""><img width="40px" src="<?php echo base_url(); ?>artwork/facebook.png" /></a>
+		<a href=""><img width="40px" src="<?php echo base_url(); ?>artwork/twitter.png" /></a>
+		<a href=""><img width="40px" src="<?php echo base_url(); ?>artwork/mail.png" /></a>
 	</div>
 </div>
 
@@ -43,14 +43,14 @@
 <div class="navigation">
 		<div class="inner">
 			<div class="navlinks">
-				<a href="/">Home</a>
-				<a href="/growers/">Growers</a>
-				<a href="/sponsors/">Sponsors</a>
-				<a href="/news/">News</a>
-				<a href="/hall_of_fame/">Hall of Fame</a>
-				<a href="/shop/">Shop</a>
-				<a href="/about/">About</a>
-				<a class="button" href="/register/">Register Now / Log In</a>
+				<a href="<?php echo base_url(); ?>">Home</a>
+				<a href="<?php echo base_url(); ?>growers/">Growers</a>
+				<a href="<?php echo base_url(); ?>sponsors/">Sponsors</a>
+				<a href="<?php echo base_url(); ?>news/">News</a>
+				<a href="<?php echo base_url(); ?>hall_of_fame/">Hall of Fame</a>
+				<a href="<?php echo base_url(); ?>shop/">Shop</a>
+				<a href="<?php echo base_url(); ?>about/">About</a>
+				<a class="button" href="<?php echo base_url(); ?>register/">Register Now / Log In</a>
 			</div>
 		</div>
 </div>

@@ -5,7 +5,7 @@
 <div class="footer">
 	<div class="inner">
 			<div class="column">
-				<img src="/artwork/footer-logo.png" alt="Grow for the cure. Small logo. Icon of beard." />
+				<img src="<?php echo base_url(); ?>artwork/footer-logo.png" alt="Grow for the cure. Small logo. Icon of beard." />
 			</div>
 			
 			<div class="column">
@@ -24,7 +24,7 @@
 	</div>
 </div>
 
-	<script src="/scripts/jquery.custom.js"></script>
+	<script src="<?php echo base_url(); ?>scripts/jquery.custom.js"></script>
 
 
 </body>

@@ -68,7 +68,7 @@ echo form_open('formupdate', $attributes);
 <div class="image-row">
 <?php 
 	foreach ($styles as $row) {
-		echo '<div class="icon"><img id="' . $row->styleID . '" alt="' . $row->styleName . '" title="' . $row->styleName . '" src="/artwork/styles/'. $row->fileName . '" /></div>';
+		echo '<div class="icon"><img id="' . $row->styleID . '" alt="' . $row->styleName . '" title="' . $row->styleName . '" src="' . base_url() .'artwork/styles/'. $row->fileName . '" /></div>';
 	}
  ?>
 </div>
