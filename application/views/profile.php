@@ -78,6 +78,10 @@ echo form_open('formupdate', $attributes);
 foreach ($styles_choices as $choice) {
 	echo "$('.image-row img#".$choice->styleID."').parent().addClass('styleBG');";
 }
+
+foreach ($pledges as $pledge) {
+	echo "$('.image-row img#".$pledge->styleID."').parent().addClass('pledged');";
+}
 ?>
 </script>
 		

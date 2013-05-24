@@ -142,6 +142,20 @@ class Model_users extends CI_Model {
 		}
 	}
 
+	function get_active_pledges($c, $u)
+	{
+		$this->db->distinct('styleID');
+		$this->db->where('userID', $u);
+		$this->db->where('campaignID', $c);
+		$query = $this->db->get('tblPledges');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+	}
+
 }
 
 

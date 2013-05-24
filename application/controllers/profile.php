@@ -17,6 +17,7 @@ class Profile extends CI_Controller {
 
 		$data['styles'] = $this->model_page_data->get_style_icons(14, 'ASC');
 
+
 		$data['singleuser'] = $this->model_users->get_single_user($user_to_get);
 		$data['userteam'] = $this->model_users->get_user_team($user_to_get);		
 		$data['campaigninfo'] = $this->model_users->get_campaign_info($user_to_get);
@@ -55,6 +56,7 @@ class Profile extends CI_Controller {
 		}	
 
 		$data['styles_choices'] = $this->model_users->get_active_styles($data['campaign_id'], $data['user_id']);
+		$data['pledges'] = $this->model_users->get_active_pledges($data['campaign_id'], $data['user_id']);
 
 
 

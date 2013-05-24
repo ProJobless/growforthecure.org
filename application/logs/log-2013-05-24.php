@@ -17,3 +17,5 @@ ERROR - 2013-05-24 14:28:23 --> 404 Page Not Found --> about/lung-cancer-facts
 ERROR - 2013-05-24 14:29:05 --> 404 Page Not Found --> about/lung-cancer-facts
 ERROR - 2013-05-24 14:29:28 --> 404 Page Not Found --> about/beards101
 ERROR - 2013-05-24 14:35:58 --> 404 Page Not Found --> about/beards101
+ERROR - 2013-05-24 16:51:07 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/Design & Development Projects/growforthecure.org/application/views/profile.php 78
+ERROR - 2013-05-24 16:55:05 --> Query error: Unknown column 'userID' in 'where clause'

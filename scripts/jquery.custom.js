@@ -4,7 +4,7 @@ $(document).ready(function(){
 	{
 		$.ajax({
 		  type: "POST",
-		  url: "http://createdbysteve.com/growforthecure/styleupdate",
+		  url: "../styleupdate",
 		  data: { style: styleID, campaign: campaignID, user: userID, idyn: insdelYN }
 		}).done(function( msg ) {
 			if (insdelYN == "del") {
@@ -21,12 +21,17 @@ $(document).ready(function(){
 
 	$('div.icon').on('click', function(){
 		if ($(this).hasClass('styleBG')) {
-			insdel = "del";
-			cid = $('input[name="campaignID"]').val();
-			uid = $('input[name="userID"]').val();
-			sid = $(this).children('img').attr('id');
-			$(this).removeClass('styleBG');
-			updateStyles(sid, cid, uid, insdel);	
+			if ($(this).hasClass('pledged')) {
+				alert('Sorry, you can not remove a style that has pledges.');
+			} else {
+				insdel = "del";
+				cid = $('input[name="campaignID"]').val();
+				uid = $('input[name="userID"]').val();
+				sid = $(this).children('img').attr('id');
+				$(this).removeClass('styleBG');
+				updateStyles(sid, cid, uid, insdel);	
+			}
+
 		} else {
 			insdel = "ins";
 			cid = $('input[name="campaignID"]').val();
