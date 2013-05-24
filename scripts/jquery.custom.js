@@ -4,7 +4,8 @@ $(document).ready(function(){
 	{
 		$.ajax({
 		  type: "POST",
-		  url: "../styleupdate",
+//		  url: "../styleupdate",
+		  url: "http://createdbysteve.com/growforthecure/styleupdate",
 		  data: { style: styleID, campaign: campaignID, user: userID, idyn: insdelYN }
 		}).done(function( msg ) {
 			if (insdelYN == "del") {
