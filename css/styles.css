@@ -91,6 +91,26 @@ a.button:hover {
 	background-color: #5783ff;
 }
 
+.subnav {
+	margin: 20px 0 50px 0;
+	text-align: center;
+}
+.subnav a {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: #666;
+	border-radius: 10px;
+	color: white;
+	padding: 5px 20px;
+	margin: 0 10px;
+}
+.subnav a:hover {
+	background-color: #ccc;
+	color: black;
+}
+
+
 
 
 h1 {
@@ -249,11 +269,46 @@ div.new-section { margin: 10px 0; }
 }
 
 
+/* ABOUT PAGE STYLES */
 
+.about-page .about-copy p { padding-bottom: 10px; font-size: 18px; line-height: 180%; width: 630px; float: right; }
 
-
-
-
+.faq-page p.faq-header {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 36px;
+	color: red;
+	padding-top: 20px;
+	padding-left: 50px;
+}
+.faq-page p.question, .beard-page p.question {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 28px;
+	padding: 10px 0 10px 50px;
+}
+.faq-page p.answer, .beard-page p.answer {
+	font-size: 16px;
+	line-height: 180%;
+	padding-left: 50px;
+}
+.faq-page ul.donate-list li {
+	font-size: 16px;
+	line-height: 180%;
+	padding-left: 50px;
+}
+.lung-page ul.growfacts, .beard-page ul.growfacts {
+	padding-left: 60px;
+	padding-top: 10px;
+}
+.lung-page .growfacts li, .beard-page .growfacts li {
+	font-size: 16px;
+	padding-bottom: 8px;
+	list-style-type: disc;
+	line-height: 160%;
+}
+.lung-page .growfacts li.inner, .beard-page .growfacts li.inner {
+	margin-left: 40px;
+	list-style-type: circle;
+}
 
 
 
