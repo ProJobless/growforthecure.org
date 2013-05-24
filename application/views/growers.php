@@ -2,6 +2,10 @@
 
 <h1>Meet the Growers</h1>
 
+<?php echo $copy; ?>
+
+<br /> <br />
+
 <?php 
 
 	foreach ($users as $user) {
