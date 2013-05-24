@@ -284,6 +284,7 @@ div.new-section { margin: 10px 0; }
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 28px;
 	padding: 10px 0 10px 50px;
+	font-weight: 700;
 }
 .faq-page p.answer, .beard-page p.answer {
 	font-size: 16px;
