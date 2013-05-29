@@ -10,7 +10,7 @@ class Profile extends CI_Controller {
 
 		$this->load->helper('form');
 
-		$user_to_get = $this->uri->segment(2);
+		$user_to_get = $this->uri->segment(3);
 
 		$this->load->model('model_users');
 		$this->load->model('model_page_data');

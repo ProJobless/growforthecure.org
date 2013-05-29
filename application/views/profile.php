@@ -82,6 +82,8 @@ echo form_open('formupdate', $attributes);
 
 <h1>All of your current photos.</h1>
 
+<p><a href="<?php echo base_URL(); ?>photos/<?php echo $user_id; ?>">Click here to add and remove photos.</a></p>
+
 <div class="current-photos">
 	<?php 
 		if (isset($photos)) {
@@ -102,12 +104,15 @@ echo form_open('formupdate', $attributes);
 
 <script>
 <?php 
-foreach ($styles_choices as $choice) {
-	echo "$('.image-row img#".$choice->styleID."').parent().addClass('styleBG');";
+if (isset($styles_choices)) {
+	foreach ($styles_choices as $choice) {
+		echo "$('.image-row img#".$choice->styleID."').parent().addClass('styleBG');";
+	}
 }
-
-foreach ($pledges as $pledge) {
-	echo "$('.image-row img#".$pledge->styleID."').parent().addClass('pledged');";
+if (isset($pledges)) {
+	foreach ($pledges as $pledge) {
+		echo "$('.image-row img#".$pledge->styleID."').parent().addClass('pledged');";
+	}
 }
 ?>
 </script>

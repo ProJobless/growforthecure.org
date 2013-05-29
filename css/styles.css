@@ -189,7 +189,10 @@ div.new-section { margin: 10px 0; }
 
 .grower-page .members { width: 110px; float: left; }
 
-
+.grower-page .image-row .icon {
+	float: left;
+	padding-right: 20px;
+}
 
 
 
@@ -313,6 +316,35 @@ div.new-section { margin: 10px 0; }
 
 
 
+/* PHOTOS UPLOADING PAGE  */
+.photos-page table td {
+	padding: 5px;
+	font-size: 16px;
+}
+.photos-page table td input[type="text"] {
+	width: 100%;
+	padding: 5px;
+	font-size: 14px;
+
+}
+
+.photos-page .registration_form input[type='submit'] {
+	margin-right: 5%;
+	width: 150px;
+	float: left;
+	background-color: #ccc;
+	color: black;
+	font-size: 14px;
+	padding: 10px;
+	margin-top: 20px;
+}
+.photos-page div.user-photos {
+	
+}
+.photos-page .photo {
+	float: left;
+	width: 110px;
+}
 
 /*  FOOTER STYLE AREA */
 

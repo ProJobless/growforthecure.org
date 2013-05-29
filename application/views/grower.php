@@ -32,7 +32,19 @@
 
 	<div class="new-section">
 		<p class="sub-head">Make a Pledge and Support <?php echo $full_name; ?>.</p>
-		<p>Styles and pledge button</p>
+		<div class="image-row">
+		<?php 
+			if (isset($styles_choices)) {
+				foreach ($styles_choices as $choice) {
+					echo '<div class="icon"><img width="50px" id="' . $choice->styleID . '" alt="' . $choice->styleName . '" title="' . $choice->styleName . '" src="' . base_url() .'artwork/styles/'. $choice->fileName . '" /></div>';
+
+				}
+			}
+		 ?>
+		</div>
+
+		<br clear="all" />
+
 	</div>
 
 	<div class="new-section">
@@ -47,23 +59,24 @@
 		<p>Days Remaining: <?php echo $campaign_remaining; ?></p>
 	</div>
 	
+<?php if (isset($statement)) { ?>
 	<div class="new-section">
 		<p class="sub-head">Personal Statement.</p>
 		<p><?php echo $statement; ?></p>
 	</div>
+<?php } ?>
 
+<?php if (isset($photos)) { ?>
 	<div class="new-section">
 		<p class="sub-head">See All of <?php echo $full_name; ?>'s Current Photos</p>
 		<?php 
-			if (isset($photos)) {
 				foreach ($photos as $photo) {
 					echo '<img src="' . base_url() . 'userphotos/' . $photo->photoImage . '" width="100px">';
 				}
-			}
 		?>
 
 	</div>
-
+<?php } ?>
 
 
 

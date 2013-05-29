@@ -6,7 +6,7 @@ class Grower extends CI_Controller {
 	{
 		$this->load->model('model_users');
 
-		$user_to_get = $this->uri->segment(2);
+		$user_to_get = $this->uri->segment(3);
 
 		// echo $user_to_get;
 
@@ -55,6 +55,8 @@ class Grower extends CI_Controller {
 
 
 		}	
+
+		$data['styles_choices'] = $this->model_users->get_active_styles($data['campaign_id'], $data['user_id']);
 
 		$data['photos'] = $this->model_users->get_user_photos($user_to_get, $data['campaign_id']);
 

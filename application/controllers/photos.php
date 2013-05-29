@@ -51,7 +51,7 @@ class Photos extends CI_Controller {
 			echo '<pre>';
 			print_r ($data['error']);
 			echo '</pre>';
-			$this->load->view('photos', $data);
+
 		}
 		else
 		{

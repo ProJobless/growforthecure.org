@@ -4,7 +4,7 @@ $(document).ready(function(){
 	{
 		var s = window.location.href;
 		if(s.indexOf("localhost") !== -1) {
-			postURL = "../styleupdate";
+			postURL = "../../styleupdate";
 		} else {
 			postURL = "http://createdbysteve.com/growforthecure/styleupdate";
 		}
