@@ -45,6 +45,7 @@ $route['404_override'] = '';
 
 $route['grower/(:any)']  = "grower/index/$1";
 $route['profile/(:any)']  = "profile/index/$1";
+$route['photos/(:num)']  = "photos/index/$1";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

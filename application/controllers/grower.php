@@ -20,7 +20,7 @@ class Grower extends CI_Controller {
 		}
 
 		$data['teammembers'] = $this->model_users->get_all_team_members($data['team_id']);
-	
+
 		// echo "<pre>";
 		// print_r($data['teammembers']);
 		// echo "</pre>";
@@ -37,6 +37,7 @@ class Grower extends CI_Controller {
 		foreach ($data['campaigninfo'] as $campaign) {
 			$data['startDate'] = $campaign->startDate;
 			$data['endDate'] = $campaign->endDate;
+			$data['campaign_id'] = $campaign->campaignID;
 			
 
 			$ts1 = strtotime($data['startDate']);
@@ -54,6 +55,9 @@ class Grower extends CI_Controller {
 
 
 		}	
+
+		$data['photos'] = $this->model_users->get_user_photos($user_to_get, $data['campaign_id']);
+
 
 		$data['body_class'] = 'grower-page';
 		$data['page_title'] = "Grow for the Cure : " . $data['full_name'] . " : Grower Profile";

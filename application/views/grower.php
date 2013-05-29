@@ -14,7 +14,7 @@
 <div class="sidebar">
 <?php 
 	if ($profile_pic) {
-		$photo = '<img src="' . base_url() . 'userphotos/' . $profile_pic . '" width="200px" />';
+		$photo = '<img src="' . base_url() . 'userphotos/' . str_replace('.', '_thumb.', $profile_pic) . '" width="200px" />';
 	} else {
 		$photo = '<img src="http://placehold.it/200x200&text=No+Profile+Photo" />';
 	}
@@ -52,9 +52,21 @@
 		<p><?php echo $statement; ?></p>
 	</div>
 
+	<div class="new-section">
+		<p class="sub-head">See All of <?php echo $full_name; ?>'s Current Photos</p>
+		<?php 
+			if (isset($photos)) {
+				foreach ($photos as $photo) {
+					echo '<img src="' . base_url() . 'userphotos/' . $photo->photoImage . '" width="100px">';
+				}
+			}
+		?>
+
+	</div>
 
 
-	grow photos<br/>
+
+
 	<div class="new-section">
 		<p class="sub-head">See All Members of Team <?php echo $team_name ?></p>
 		
@@ -63,9 +75,9 @@
 		foreach ($teammembers as $member) {
 
 			if ($member->profilePic) {
-				$photo = '<img src="' . base_url() . 'userphotos/' . $member->profilePic . '" width="200px" />';
+				$photo = '<img src="' . base_url() . 'userphotos/' . str_replace('.', '_thumb.', $member->profilePic) . '" width="100px" />';
 			} else {
-				$photo = '<img src="http://placehold.it/200x200&text=NoProfilePhoto" />';
+				$photo = '<img src="http://placehold.it/100x100&text=NoProfilePhoto" />';
 			}
 
 			?>

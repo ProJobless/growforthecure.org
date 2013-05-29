@@ -58,12 +58,18 @@ class Profile extends CI_Controller {
 		$data['styles_choices'] = $this->model_users->get_active_styles($data['campaign_id'], $data['user_id']);
 		$data['pledges'] = $this->model_users->get_active_pledges($data['campaign_id'], $data['user_id']);
 
+		$data['photos'] = $this->model_users->get_user_photos($user_to_get, $data['campaign_id']);
+
 
 
 		$this->load->view('header', $data);
 		$this->load->view('profile', $data);
 		$this->load->view('footer', $data);
 	}
+
+
+
+
 
 
 }

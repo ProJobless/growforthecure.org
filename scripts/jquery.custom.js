@@ -2,10 +2,16 @@ $(document).ready(function(){
 
 	function updateStyles(styleID, campaignID, userID, insdelYN)
 	{
+		var s = window.location.href;
+		if(s.indexOf("localhost") !== -1) {
+			postURL = "../styleupdate";
+		} else {
+			postURL = "http://createdbysteve.com/growforthecure/styleupdate";
+		}
+
 		$.ajax({
 		  type: "POST",
-//		  url: "../styleupdate",
-		  url: "http://createdbysteve.com/growforthecure/styleupdate",
+		  url: postURL,
 		  data: { style: styleID, campaign: campaignID, user: userID, idyn: insdelYN }
 		}).done(function( msg ) {
 			if (insdelYN == "del") {

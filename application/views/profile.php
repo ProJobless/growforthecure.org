@@ -59,6 +59,9 @@ echo form_open('formupdate', $attributes);
 	<input type="submit" value="Update Profile" />
 </div>
 
+</form>
+
+
 <br clear="all" />
 <br clear="all" />
 <br clear="all" />
@@ -72,6 +75,30 @@ echo form_open('formupdate', $attributes);
 	}
  ?>
 </div>
+
+<br clear="all" />
+<br clear="all" />
+<br clear="all" />
+
+<h1>All of your current photos.</h1>
+
+<div class="current-photos">
+	<?php 
+		if (isset($photos)) {
+			foreach ($photos as $photo) {
+				echo '<img src="' . base_url() . 'userphotos/' . $photo->photoImage . '" width="100px">';
+			}
+		}
+	?>
+
+</div>
+
+<br clear="all" />
+<br clear="all" />
+
+
+
+
 
 <script>
 <?php 

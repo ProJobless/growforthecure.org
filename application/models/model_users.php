@@ -156,6 +156,25 @@ class Model_users extends CI_Model {
 		}
 	}
 
+	function get_user_photos($u, $c)
+	{
+		$this->db->where('growerID', $u);
+		$this->db->where('campaignID', $c);
+		$query = $this->db->get('tblUserPhotos');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+
+
+	}
+
+
+
+
+
 }
 
 
