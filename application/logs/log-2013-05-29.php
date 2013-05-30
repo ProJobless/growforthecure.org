@@ -94,3 +94,4 @@ ERROR - 2013-05-29 14:44:48 --> 404 Page Not Found --> profile/styleupdate
 ERROR - 2013-05-29 15:34:41 --> Severity: Notice  --> Undefined variable: styles /Users/Steve/Dropbox/DesignDev_Projects/growforthecure.org/application/views/grower.php 39
 ERROR - 2013-05-29 15:34:41 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/Steve/Dropbox/DesignDev_Projects/growforthecure.org/application/views/grower.php 39
 ERROR - 2013-05-29 15:38:57 --> You did not select a file to upload.
+ERROR - 2013-05-29 22:07:22 --> 404 Page Not Found --> profile/1

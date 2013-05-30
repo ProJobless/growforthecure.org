@@ -29,6 +29,7 @@ class Formupdate extends CI_Controller {
 		$data['statement'] = $this->input->post('statement');
 		$data['endDate'] = $this->input->post('enddate');
 		$data['password'] = $this->input->post('password1');
+		$data['full_name'] = strtolower($this->input->post('firstname')) . '-' . strtolower($this->input->post('lastname'));
 
 		if ($this->form_validation->run() == FALSE)
 		{
@@ -71,7 +72,7 @@ class Formupdate extends CI_Controller {
 
 
 
-			redirect('/profile/'.$data['user_id'], 'refresh');
+			redirect('/profile/' . $data['full_name'] . '/' .$data['user_id'], 'refresh');
 		}
 
 	}
