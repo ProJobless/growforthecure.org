@@ -23,7 +23,10 @@
 	<?php echo $photo; ?>
 </div>
 
+
 <div class="main-content">
+
+	<a href="<?php echo base_url(); ?>profile/<? echo strtolower($first_name); ?>-<?echo strtolower($last_name); ?>/<?php echo $user_id; ?>">Temp link to profile page</a>
 
 	<div class="new-section">
 		<p class="sub-head">Badges Earned.</p>

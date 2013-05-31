@@ -195,6 +195,28 @@ div.new-section { margin: 10px 0; }
 }
 
 
+/* GROWERS PAGE  */
+
+.growers-page p.data-copy {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.growers-page .search-bar-p {
+	margin-left: 120px;
+}
+.growers-page .search-bar-i {
+	padding-top: 10px;
+	margin-left: 20px;
+}
+.growers-page .search-bar-i input {
+	padding: 6px;
+	width: 400px;
+	font-size: 16px;
+}
+
+
+
 
 /* REGISTRATION PAGE */
 

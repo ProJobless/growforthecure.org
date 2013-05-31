@@ -2,9 +2,17 @@
 
 <h1>Meet the Growers</h1>
 
-<?php echo $copy; ?>
+<p class="data-copy"><?php echo $copy; ?><p>
 
-<br /> <br />
+<div class="left search-bar-p">
+	<p class="sub-head">Grower and Team Search:</p>
+</div>
+
+<div class="left search-bar-i">
+	<input type="text" name="search" id="search" />
+</div>
+
+<br clear="all" />
 
 <?php 
 
