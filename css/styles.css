@@ -6,6 +6,7 @@ body {
 	background-image: url('../artwork/worn-background.jpg');
 	background-position: center top; background-repeat: repeat-y;
 	font-family: georgia, times, serif;
+	-webkit-text-size-adjust: 100%;
 }
 
 p { line-height: 160%; font-size: 15px; }
