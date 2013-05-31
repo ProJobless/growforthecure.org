@@ -125,7 +125,7 @@ p.sub-head {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 32px; color: red; padding-bottom: 10px;
 }
-
+p.sub-head a { color: red; }
 div.new-section { margin: 10px 0; }
 
 
@@ -198,7 +198,7 @@ div.new-section { margin: 10px 0; }
 
 /* GROWERS PAGE  */
 
-.growers-page p.data-copy {
+.growers-page p.data-copy, .sponsor-page p.data-copy {
 	font-size: 18px;
 	margin-bottom: 20px;
 }
@@ -216,7 +216,19 @@ div.new-section { margin: 10px 0; }
 	font-size: 16px;
 }
 
-
+/* SPONSORS PAGE */
+.sponsor-page .sponsor {
+	float: left;
+	width: 450px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted black;
+}
+.sponsor-page p.desc {
+	font-size: 18px;
+	line-height: 180%;
+}
 
 
 /* REGISTRATION PAGE */
