@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 
-	<meta name="viewport" content="width=1000">
+	<meta name="viewport" content="width=1200">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
