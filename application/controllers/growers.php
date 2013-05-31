@@ -27,6 +27,42 @@ class Growers extends CI_Controller {
 
 	}
 
+	function get_grower_list()
+	{
+		$this->load->model('model_users');
+
+		if (isset($_REQUEST['term'])) {
+			$term = $_GET['term'];
+		} else {
+			$term = '';
+		}
+		
+		$data['users'] = $this->model_users->search_for_users($term);
+
+		// echo '<pre>';
+		// print_r ($data['users']);
+		
+		//$this->output->set_content_type('application/json');
+
+		$numItems = count($data['users']);
+		$i = 0;
+
+		if (isset($data['users'])) {
+			echo '[';
+			foreach ($data['users'] as $user) {
+
+			echo '{ "label": "' . $user->firstName . ' ' . $user->lastName . '", "link": "' . strtolower($user->firstName) . '-' . strtolower($user->lastName) . '/' . $user->userID . '" }';
+			$i = $i+1;
+			if ($i != $numItems) {
+				echo ',';
+			}
+		}
+			echo ']';
+
+		}
+	}
+   
+
 
 }
 

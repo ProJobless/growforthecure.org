@@ -21,6 +21,19 @@ class Model_users extends CI_Model {
 
 	}
 
+	function search_for_users($term)
+	{
+
+		$query = $this->db->query('select firstName, lastName, userID from tblUsers where lastName like "%' . $term . '%" or firstName like "%' . $term . '%"');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+
+	}
+
 	function get_single_user($id)
 	{
 

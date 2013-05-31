@@ -10,9 +10,10 @@
 
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
-
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui-1.10.3.custom.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Francois+One|Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
 

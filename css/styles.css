@@ -198,7 +198,7 @@ div.new-section { margin: 10px 0; }
 
 /* GROWERS PAGE  */
 
-.growers-page p.data-copy, .sponsor-page p.data-copy {
+p.data-copy {
 	font-size: 18px;
 	margin-bottom: 20px;
 }

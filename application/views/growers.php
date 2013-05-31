@@ -9,7 +9,7 @@
 </div>
 
 <div class="left search-bar-i">
-	<input type="text" name="search" id="search" />
+	<input type="text" name="search" id="searchUsers" />
 </div>
 
 <br clear="all" />
@@ -21,6 +21,19 @@
 	}
 
 ?>
+
+
+<script>
+
+	$('#searchUsers').autocomplete({
+		source: "<?php echo base_url(); ?>growers/get_grower_list",
+		position: { my : "bottom left" },
+	})
+
+	console.log("working")
+
+</script>
+
 
 
 

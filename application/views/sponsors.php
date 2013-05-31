@@ -1,8 +1,8 @@
 <div class="inner">
 
-<p class="data-copy"><?php echo $copy; ?> For more information, email us at <a href="mailto:info@growforthecure.org">info@growforthecure.org</a><p>
-
 <h1>Our Sponsors</h1>
+
+<p class="data-copy"><?php echo $copy; ?> For more information, email us at <a href="mailto:info@growforthecure.org">info@growforthecure.org</a><p>
 
 
 <div class="sponsor">

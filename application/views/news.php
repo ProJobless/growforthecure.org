@@ -1,8 +1,11 @@
 <div class="inner">
 
-<?php echo $copy; ?>
+<h1>News Items</h1>
 
-<br /> <br />
+<p class="data-copy"><?php echo $copy; ?></p>
+
+
+
 
 
 </div>
