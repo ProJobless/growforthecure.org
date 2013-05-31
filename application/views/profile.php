@@ -97,8 +97,8 @@ echo form_open('formupdate', $attributes);
 
 <br clear="all" />
 <br clear="all" />
-
-
+<br clear="all" />
+<br clear="all" />
 
 
 
@@ -116,12 +116,6 @@ if (isset($pledges)) {
 }
 ?>
 </script>
-		
-<br clear="all" />
-<br clear="all" />
-
-
-
 
 
 

@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+// POST ICON SELECTION TO DATABASE
+
 	function updateStyles(styleID, campaignID, userID, insdelYN)
 	{
 		var s = window.location.href;
@@ -23,8 +26,8 @@ $(document).ready(function(){
 		});
 	}
 
-//	$('div.image-row div.icon').click(updateStyles(styleID, userID));
 
+// SET ICON AS SELECTED OR NOT
 
 	$('div.icon').on('click', function(){
 		if ($(this).hasClass('styleBG')) {
@@ -38,7 +41,6 @@ $(document).ready(function(){
 				$(this).removeClass('styleBG');
 				updateStyles(sid, cid, uid, insdel);	
 			}
-
 		} else {
 			insdel = "ins";
 			cid = $('input[name="campaignID"]').val();
@@ -47,15 +49,7 @@ $(document).ready(function(){
 			$(this).addClass('styleBG');
 			updateStyles(sid, cid, uid, insdel);	
 		}
-
-
-
-
 	});
-
-
-
-
 
 
 

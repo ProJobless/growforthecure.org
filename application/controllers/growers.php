@@ -20,6 +20,7 @@ class Growers extends CI_Controller {
 		$data['page_title'] = "Grow for the Cure : Meet Our Growers";
 		$data['page_description'] = "Meet the growers doing their part to help fight Lung Cancer";
 
+		$data['styles'] = $this->model_page_data->get_style_icons(11, 'RANDOM');
 
 		$this->load->view('header', $data);
 		$this->load->view('growers', $data);

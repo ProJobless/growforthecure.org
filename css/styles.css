@@ -215,6 +215,39 @@ p.data-copy {
 	width: 400px;
 	font-size: 16px;
 }
+.growers-page div.grower {
+	width: 175px;
+	height: 200px;
+	float: left;
+	margin-right: 20px;
+}
+.growers-page div.grower img {
+	max-width: 175px;
+	max-height: 150px;
+	padding-bottom: 10px;
+}
+.growers-page div.grower a {
+	color: red;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.growers-page .easy-banner {
+	background-color: #ccc;
+	padding: 10px;
+	margin: 40px 0;
+}
+.growers-page .image-row {
+	text-align: center;
+}
+.growers-page .image-row img {
+	width: 50px;
+	padding: 0 15px;
+}
+
+
+
+
 
 /* SPONSORS PAGE */
 .sponsor-page .sponsor {
