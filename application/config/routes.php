@@ -44,6 +44,7 @@ $route['404_override'] = '';
 // REWRITER FOR GROWER PROFILES 
 
 $route['grower/(:any)/(:any)']  = "grower/index/$1/$2";
+$route['teams/(:any)/(:any)']  = "teams/index/$1/$2";
 $route['profile/(:any)/(:any)']  = "profile/index/$1/$2";
 $route['photos/(:num)']  = "photos/index/$1";
 

@@ -39,34 +39,47 @@ class Growers extends CI_Controller {
 		}
 		
 		$data['users'] = $this->model_users->search_for_users($term);
+		$data['teams'] = $this->model_users->search_for_teams($term);
 
-		// echo '<pre>';
-		// print_r ($data['users']);
-		
-		//$this->output->set_content_type('application/json');
 
 		$numItems = count($data['users']);
+		$numTeams = count($data['teams']);
 		$i = 0;
+		$x = 0;
 
-		if (isset($data['users'])) {
+		if (isset($data['users']) || isset($data['teams'])) {
 			echo '[';
-			foreach ($data['users'] as $user) {
 
-			echo '{ "label": "' . $user->firstName . ' ' . $user->lastName . '", "link": "' . strtolower($user->firstName) . '-' . strtolower($user->lastName) . '/' . $user->userID . '" }';
-			$i = $i+1;
-			if ($i != $numItems) {
-				echo ',';
+			if (isset($data['users'])) {
+				foreach ($data['users'] as $user) {
+					echo '{ "label": "' . $user->firstName . ' ' . $user->lastName . '", "link": "' . strtolower($user->firstName) . '-' . strtolower($user->lastName) . '/' . $user->userID . '" }';
+					
+					$i = $i+1;
+					
+					if ($i != $numItems) {
+						echo ',';
+					}
+				}
 			}
-		}
+			
+			if (isset($data['teams'])) {
+				if (isset($data['users'])){
+					echo ',';
+				}
+
+				foreach ($data['teams'] as $team) {
+					echo '{ "label": "' . $team->teamName . '", "link": "../teams/' . strtolower($team->teamName) . '/' . $team->teamID . '" }';
+				$x = $x+1;
+				if ($x != $numTeams) {
+					echo ',';
+				}
+			}
+			}
 			echo ']';
 
 		}
 	}
-   
+
 
 
 }
-
-/* End of file grower.php */
-/* Location: ./application/controllers/grower.php */
-

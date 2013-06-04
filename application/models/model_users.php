@@ -34,6 +34,19 @@ class Model_users extends CI_Model {
 
 	}
 
+	function search_for_teams($term)
+	{
+
+		$query = $this->db->query('select teamName, teamID from tblTeams where teamName like "%' . $term . '%"');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+
+	}
+
 	function get_single_user($id)
 	{
 
