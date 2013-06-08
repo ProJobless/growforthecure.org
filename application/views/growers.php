@@ -49,7 +49,7 @@
 			$photo = $user->profilePic;
 
 			if (empty($photo)) {
-				$photo = "http://placehold.it/400x300&text=No+Profile+Photo";
+				$photo = "http://placehold.it/300x400&text=No+Profile+Photo";
 			} else {
 				$photo = str_replace('.', '_thumb.', $photo);
 				$photo = base_url() . 'userphotos/' . $photo;

@@ -1,6 +1,23 @@
 <div class="inner">
 
-<h1>Now you can do your part. Become a grower.</h1>
+<h1>Already have an account? Log in here.</h1>
+
+<div class="login">
+
+<?php
+	$attributes = array('class' => 'log-in', 'id' => 'log-in');
+	echo form_open('login', $attributes);
+?>
+
+	Email Address : <?php echo form_input('emailaddress', set_value('emailaddress')); ?>
+	Password: <?php echo form_input('password', set_value('password')); ?>
+	<input type="submit" value="Log In" />
+
+</form>
+
+</div>
+
+<h1>No Account? Do your part. Become a Grower.</h1>
 
 <p class="sub-head">Let's just start with your basic contact information first.</p>
 

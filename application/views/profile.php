@@ -9,6 +9,12 @@
 
 <br clear="all" />
 
+<?php if (isset($sorry)) {
+	echo '<p class="error">' . $sorry . '</p>';
+}
+?>
+
+
 <h1>Edit your grower profile.</h1>
 
 <?php
@@ -106,7 +112,7 @@ echo form_open('formupdate', $attributes);
 <?php 
 if (isset($styles_choices)) {
 	foreach ($styles_choices as $choice) {
-		echo "$('.image-row img#".$choice->styleID."').parent().addClass('styleBG');";
+		echo "$('.image-row img#".$choice->StyleID."').parent().addClass('styleBG');";
 	}
 }
 if (isset($pledges)) {

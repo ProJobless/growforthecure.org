@@ -8,6 +8,19 @@ class Model_users extends CI_Model {
 		parent::__construct();
 	}
 	
+	function user_login($e, $p) {
+		$this->db->where('emailAddress', $e);
+		$this->db->where('password', $p);
+		$query = $this->db->get('tblUsers');
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			redirect(base_url('who'), 'refresh');
+		}
+	}
+
+
 	function get_all_users()
 	{
 
@@ -155,12 +168,26 @@ class Model_users extends CI_Model {
 
 	}
 
-	function get_active_styles($c, $u)
+	// function get_active_styles($c, $u)
+	// {
+	// 	$this->db->where('userID', $u);
+	// 	$this->db->where('campaignID', $c);
+	// 	$this->db->join('tblStyles', 'tblStyles.styleID = tblUserStyles.styleID');
+	// 	$query = $this->db->get('tblUserStyles');
+
+	// 	if ($query->num_rows() > 0) {
+	// 		return $query->result();
+	// 	} else {
+	// 		return NULL;
+	// 	}
+	// }
+
+	function get_active_styles_and_pledges($c, $u)
 	{
-		$this->db->where('userID', $u);
-		$this->db->where('campaignID', $c);
-		$this->db->join('tblStyles', 'tblStyles.styleID = tblUserStyles.styleID');
-		$query = $this->db->get('tblUserStyles');
+
+// tblStyles.StyleID, tblStyles.styleName, tblStyles.fileName, tblUserStyles.userID, tblUserStyles.campaignID, sum(tblPledges.pledgeAmount) as PledgeAmount 
+		$query = $this->db->query('select  tblStyles.StyleID, tblStyles.styleName, tblStyles.fileName, tblUserStyles.userID, tblUserStyles.campaignID, sum(tblPledges.pledgeAmount) as PledgeAmount from tblStyles inner join tblUserStyles on tblStyles.styleID = tblUserStyles.styleID left join (select * from tblPledges where userID = '.$u.' and campaignID = '.$c.') tblPledges on tblStyles.styleID = tblPledges.styleID where tblUserStyles.userID = '.$u.' and tblUserStyles.campaignID = '.$c.' group by tblStyles.styleID');
+
 
 		if ($query->num_rows() > 0) {
 			return $query->result();

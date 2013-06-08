@@ -4,13 +4,25 @@ class Profile extends CI_Controller {
 
 	function index()
 	{
+
+		$user_to_get = $this->uri->segment(3);
+
+		if (isset($_COOKIE["userid"])) {
+			if ($user_to_get != $_COOKIE['userid']) {
+				redirect('/profile/'.$_COOKIE['fullname'] .'/' . $_COOKIE['userid'] . '?sorry=1', 'refresh');
+			}
+		}
+
+		if (isset($_GET["sorry"])) {
+			$data['sorry'] = 'Sorry, you can only access your own grower profile. You have been redireceted to your logged in profile.';
+		}
+
 		$data['page_title'] = "Grow for the Cure : Edit your Profile";
 		$data['page_description'] = "Profile Editor";
 		$data['body_class'] = "profile-page";
 
 		$this->load->helper('form');
 
-		$user_to_get = $this->uri->segment(3);
 
 		$this->load->model('model_users');
 		$this->load->model('model_page_data');
@@ -55,7 +67,7 @@ class Profile extends CI_Controller {
 			$data['campaign_remaining'] = floor($seconds_diff3/3600/24);
 		}	
 
-		$data['styles_choices'] = $this->model_users->get_active_styles($data['campaign_id'], $data['user_id']);
+		$data['styles_choices'] = $this->model_users->get_active_styles_and_pledges($data['campaign_id'], $data['user_id']);
 		$data['pledges'] = $this->model_users->get_active_pledges($data['campaign_id'], $data['user_id']);
 
 		$data['photos'] = $this->model_users->get_user_photos($user_to_get, $data['campaign_id']);

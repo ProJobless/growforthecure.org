@@ -189,10 +189,29 @@ div.new-section { margin: 10px 0; }
 .grower-page .main-content { width: 720px; float: right; }
 
 .grower-page .members { width: 110px; float: left; }
-
+.grower-page .image-row { margin-top: 0px; }
 .grower-page .image-row .icon {
 	float: left;
-	padding-right: 20px;
+	padding-right: 75px;
+}
+.grower-page .pledgeamount {
+	background-color:rgba(255,0,0,1);
+	border-radius: 10px;
+	padding: 2px 7px 5px 5px;
+	color: white;
+	font-size: 18px;
+	z-index: 2;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 0px;
+}
+.grower-page .grow-status {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 36px;
+	padding: 15px;
+	background-color: red;
+	text-align: center;
+	color: white;
 }
 
 
@@ -222,8 +241,8 @@ p.data-copy {
 	margin-right: 20px;
 }
 .growers-page div.grower img {
-	max-width: 175px;
-	max-height: 150px;
+	max-width: 150px;
+	max-height: 200px;
 	padding-bottom: 10px;
 }
 .growers-page div.grower a {
@@ -265,7 +284,18 @@ p.data-copy {
 
 
 /* REGISTRATION PAGE */
-
+.registration-page .login {
+	margin-bottom: 40px;
+}
+.registration-page .login input[type='text'] {
+	padding: 5px;
+	margin: 0 10px;
+	width: 200px;
+}
+.registration-page .login input[type='submit'] {
+	font-size: 16px;
+	width: 100px;
+}
 .registration-page .registration_form table {
 	font-size: 16px;
 	line-height: 140%;

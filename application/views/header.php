@@ -52,10 +52,20 @@
 				<a href="<?php echo base_url(); ?>hall_of_fame/">Hall of Fame</a>
 				<a href="<?php echo base_url(); ?>shop/">Shop</a>
 				<a href="<?php echo base_url(); ?>about/">About</a>
+
+
+
+				<?php if (isset($_COOKIE["userid"])) { ?>
+					<?php if (current_url() ==  base_url() . 'profile/' . $_COOKIE["fullname"] .'/' . $_COOKIE['userid']) { ?>
+						<a class="button" href="<?php echo base_url(); ?>logout">Log Out</a>
+					<?php } else { ?>
+						<a class="button" href="<?php echo base_url(); ?>profile/<?php echo $_COOKIE["fullname"] ?>/<?php echo $_COOKIE['userid']; ?>">View / Edit Your Profile</a>
+					<?php } ?>
+				<?php } else { ?>
 				<a class="button" href="<?php echo base_url(); ?>register/">Register Now / Log In</a>
+				<?php }	?>
+
 			</div>
 		</div>
 </div>
-
 <br clear="all" />
-
