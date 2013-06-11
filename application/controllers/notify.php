@@ -35,7 +35,7 @@ class Notify extends CI_Controller {
 
 				$this->email->initialize($configm);
 //				$receipentemail	= $grower_info->email;
-				$receipentemail	= $'stephen@stephencollins.me';
+				$receipentemail	= 'stephen@stephencollins.me';
 
 				$link = base_url()."index.php/home/supportgrower/$growerid";
 
