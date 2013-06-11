@@ -46,7 +46,7 @@ class Notify extends CI_Controller {
 //				$body = str_replace('[STYLENAME]',$style_name,$body);
 //				$body = str_replace('[LINK]','<b><a href="'.$link.'" target="_blank">'.$link.'</a></b>',$body);
 				$body = 'Test email from Paypal link.';
-				$body = $body + $growerid + $styleid
+				$body = $body + $growerid + $styleid;
 				$this->email->from('admin@growforthecure.org');
 				$this->email->to($receipentemail);
 
