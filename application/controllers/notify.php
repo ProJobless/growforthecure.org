@@ -13,6 +13,7 @@ class Notify extends CI_Controller {
 		$this->load->library('email');
 
 $config['protocol'] = 'sendmail';
+$config['mailpath'] = '/usr/sbin/sendmail -t -i ';
 $config['charset'] = 'iso-8859-1';
 $config['wordwrap'] = TRUE;
 
@@ -21,15 +22,13 @@ $this->email->initialize($config);
 $this->email->from('stephen@stephencollins.me', 'Stephen Collins');
 $this->email->to('scollins@slightlymanic.com'); 
 
+
 $this->email->subject('Email Test');
 $this->email->message('Testing the email class.');	
 
 $this->email->send();
 
 echo $this->email->print_debugger();
-
-
-
 
 // 		if($growerid && $styleid){
 // 			$payment_status = $this->input->post('payment_status');
