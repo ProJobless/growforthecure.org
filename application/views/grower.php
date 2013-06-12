@@ -56,6 +56,14 @@
 
 <?php } ?>
 
+<script src="<?php echo base_url() ?>scripts/paypal-button.min.js?merchant=paypal@lungcancerfoundation.org" 
+    data-button="donate" 
+    data-name="Donation: XXXXX" 
+    data-callback="http://createdbysteve.com/growforthecure" 
+    data-env="sandbox"
+></script>
+
+
 	<div class="new-section">
 		<p class="sub-head"><?php echo $full_name; ?>'s generous supporters.</p>
 		<p>Comments</p>

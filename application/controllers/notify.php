@@ -7,26 +7,43 @@ class Notify extends CI_Controller {
 		$custom = $this->input->get('custom');
 		list($growerid, $styleid) = explode('-',$custom);
 
-		echo $growerid;
-		echo $styleid;
+//		echo $growerid;
+//		echo $styleid;
+
+//		$grower_name = $growerid;
+		$grower_name = 'Stephen Collins';
+
+//		$payer_firstname = $_POST['first_name'];
+		$payer_firstname = 'Stephen';
+		$payer_email = 'stephen@stephencollins.me';
+//		$payer_email = $_POST['payer_email'];
+
+		$message = '<html><head></head><body>';
+		$message = $message . '<p>Thank you for supporting ' . $grower_name . ' in trying to reach his goal.</p>';
+		$message = $message . '<p>' . $growerid . '</p>';
+		$message = $message . '<p>' . $styleid . '</p>;
+		$message = $message . '</body></html>';
 
 		$this->load->library('email');
 
-$config['protocol'] = 'sendmail';
-$config['mailpath'] = '/usr/sbin/sendmail -t -i';
-$config['charset'] = 'iso-8859-1';
-$config['wordwrap'] = TRUE;
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'mail.growforthecure.org';
+		$config['smtp_user'] = 'do_not_reply@growforthecure.org';
+		$config['smtp_pass'] = 'vtiSfS10';
+		$config['smtp_port'] = '26';
+		$config['charset'] = 'iso-8859-1';
+		$config['mailtype'] = 'html';
 
-$this->email->initialize($config);
+		$this->email->initialize($config);
 
-$this->email->from('stephen@stephencollins.me', 'Stephen Collins');
-$this->email->to('scollins@slightlymanic.com'); 
+		$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
+		$this->email->to($payer_email); 
 
 
-$this->email->subject('Email Test');
-$this->email->message('Testing the email class.');	
+		$this->email->subject('Thank you for your donation, ' . $payer_firstname . '.');
+		$this->email->message($message);	
 
-$this->email->send();
+		$this->email->send();
 
 echo $this->email->print_debugger();
 
