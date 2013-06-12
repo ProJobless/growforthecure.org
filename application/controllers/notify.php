@@ -21,7 +21,7 @@ class Notify extends CI_Controller {
 		$message = '<html><head></head><body>';
 		$message = $message . '<p>Thank you for supporting ' . $grower_name . ' in trying to reach his goal.</p>';
 		$message = $message . '<p>' . $growerid . '</p>';
-		$message = $message . '<p>' . $styleid . '</p>;
+		$message = $message . '<p>' . $styleid . '</p>';
 		$message = $message . '</body></html>';
 
 		$this->load->library('email');
