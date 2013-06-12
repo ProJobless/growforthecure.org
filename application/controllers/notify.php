@@ -4,33 +4,51 @@ class Notify extends CI_Controller {
 
 	public function index()
 	{
-		$custom = $this->input->get('custom');
-		list($growerid, $styleid) = explode('-',$custom);
+		if (current_url() == 'http://localhost:8888/growforthecure.org/notify') {
+			$testing = TRUE;
+		} else {
+			$testing = FALSE;
+		}
+		
+		if ($testing) {
+			
+			// WE ARE TESTING, POPULATE DATA OURSELVES.
+			
+			$custom = 'Not Set';
+			$growerid = 'TESTGROWER';
+			$styleid = 'TESTSTYLE';
+			$grower_name = 'Stephen Collins';
+			$payer_firstname = 'Stephen';
+			$payer_email = 'stephen@stephencollins.me';
+			$payer_amount = '10';
 
-//		echo $growerid;
-//		echo $styleid;
-
-//		$grower_name = $growerid;
-		$grower_name = 'Stephen Collins';
-
-//		$payer_firstname = $_POST['first_name'];
-		$payer_firstname = 'Stephen';
-		$payer_email = 'stephen@stephencollins.me';
-//		$payer_email = $_POST['payer_email'];
+		} else {
+			
+			// LIVE, USE DATA RETURNED IN POST.
+			
+			$custom = $_POST['custom'];
+			list($growerid, $styleid) = explode('-',$custom);	
+			$grower_name = $growerid;
+			$payer_firstname = $_POST['first_name'];
+			$payer_email = $_POST['payer_email'];
+			$payer_amount = $_POST['mc_gross'];
+		}
 
 		$message = '<html><head></head><body>';
-		$message = $message . '<p>Thank you for supporting ' . $grower_name . ' in trying to reach his goal.</p>';
-		$message = $message . '<p>' . $growerid . '</p>';
-		$message = $message . '<p>' . $styleid . '</p>';
+		$message = $message . '<p>Payee Name : ' . $payer_firstname . '</p>';
+		$message = $message . '<p>Grower Name : ' . $grower_name . '</p>';
+		$message = $message . '<p>Grower ID : ' . $growerid . '</p>';
+		$message = $message . '<p>Style ID : ' . $styleid . '</p>';
+		$message = $message . '<p>Amount : $' . $payer_amount . '</p>';
 		$message = $message . '</body></html>';
 
 		$this->load->library('email');
 
 		$config['protocol'] = 'smtp';
-		$config['smtp_host'] = 'mail.growforthecure.org';
-		$config['smtp_user'] = 'do_not_reply@growforthecure.org';
-		$config['smtp_pass'] = 'vtiSfS10';
-		$config['smtp_port'] = '26';
+		$config['smtp_host'] = 'smtp.mandrillapp.com';
+		$config['smtp_user'] = 'stephen@stephencollins.me';
+		$config['smtp_pass'] = 'IrLx5aS2RPPLc_FcG6cWkQ';
+		$config['smtp_port'] = '587';
 		$config['charset'] = 'iso-8859-1';
 		$config['mailtype'] = 'html';
 
@@ -45,7 +63,9 @@ class Notify extends CI_Controller {
 
 		$this->email->send();
 
-echo $this->email->print_debugger();
+		echo $this->email->print_debugger();
+
+		echo current_url();
 
 // 		if($growerid && $styleid){
 // 			$payment_status = $this->input->post('payment_status');

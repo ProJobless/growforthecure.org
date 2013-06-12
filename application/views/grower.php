@@ -40,28 +40,32 @@
 		<div class="image-row">
 		<?php 		
 				foreach ($styles_choices as $choice) {
+
+					$paypalLink = 'https://www.sandbox.paypal.com/cgi-bin/webscr?business=paypal@lungcancerfoundation.org
+						&amp;cmd=_donations&rm=2
+						&amp;item_name=Support+' . urlencode($full_name) . '+of+Growforthecure.org
+						&amp;item_number=Grow+Style+' . urlencode($choice->styleName) . '&amp;currency_code=USD
+						&amp;notify_url=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=GROWERNAME-'.$choice->StyleID.'
+						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fthankyou&custom=GROWERNAME-'.$choice->StyleID;
+
 					if (isset($choice->PledgeAmount)) {
 						$PA = '<span class="pledgeamount">$' . $choice->PledgeAmount . '</span>';
 					} else {
 						$PA = '';
 					}
-					echo '<div class="icon"><img width="60px" id="' . $choice->StyleID . '" alt="' . $choice->styleName . '" title="' . $choice->styleName . '" src="' . base_url() .'artwork/styles/'. $choice->fileName . '" />'  . $PA .'</div>';
+					echo '<div class="icon"><a target="_blank" href="' . $paypalLink . '"><img width="60px" id="' . $choice->StyleID . '" alt="' . $choice->styleName . '" title="' . $choice->styleName . '" src="' . base_url() .'artwork/styles/'. $choice->fileName . '" />'  . $PA .'</a></div>';
 
 				}
 		 ?>
 		</div>
 		<br clear="all" />
 
+<?php // echo $paypalLink; ?>
+
 	</div>
 
 <?php } ?>
 
-<script src="<?php echo base_url() ?>scripts/paypal-button.min.js?merchant=paypal@lungcancerfoundation.org" 
-    data-button="donate" 
-    data-name="Donation: XXXXX" 
-    data-callback="http://createdbysteve.com/growforthecure" 
-    data-env="sandbox"
-></script>
 
 
 	<div class="new-section">
