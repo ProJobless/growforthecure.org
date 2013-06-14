@@ -5,3 +5,6 @@ ERROR - 2013-06-12 11:02:02 --> Severity: Notice  --> Undefined offset: 1 /Users
 ERROR - 2013-06-12 11:05:00 --> Severity: Notice  --> Undefined offset: 1 /Users/Steve/Dropbox/DesignDev_Projects/growforthecure.org/application/controllers/notify.php 12
 ERROR - 2013-06-12 11:37:24 --> 404 Page Not Found --> css
 ERROR - 2013-06-12 11:47:41 --> 404 Page Not Found --> css
+ERROR - 2013-06-12 22:31:43 --> Unable to select database: growforthecure
+ERROR - 2013-06-12 22:43:07 --> 404 Page Not Found --> userphotos
+ERROR - 2013-06-12 22:43:07 --> 404 Page Not Found --> userphotos

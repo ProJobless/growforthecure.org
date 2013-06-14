@@ -4,6 +4,8 @@ class Register extends CI_Controller {
 
 function index()
 	{
+
+		$this->load->helper('cookie');
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -120,7 +122,12 @@ function index()
 			$this->db->set('current', 1);
 			$this->db->insert('tblCampaigns');
 
-			redirect('/profile/'.$userID, 'refresh');
+			$fullName = strtolower($firstname) . '-' . strtolower($lastname);
+
+			setcookie('userid', $userID, time()+60*60*24*30, '/');
+			setcookie('fullname', $fullName, time()+60*60*24*30, '/');
+
+			redirect('/profile/'. $fullName . '/' . $userID, 'refresh');
 		}
 	}
 
