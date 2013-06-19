@@ -346,10 +346,31 @@ p.data-copy {
 	float: left;
 	width: 600px;
 }
-.profile-page .calendar-area {
+.profile-page .calendar-area, .profile-page .invite-area {
 	float: right;
 	width: 350px;
 }
+.profile-page .invite-area input[type=text] {
+	width: 95%;
+	padding: 5px;
+	font-size: 14px;
+}
+.profile-page .invite-area a {
+	float: right;
+	text-decoration: none;
+	color: white;
+	background-color: #666;
+	padding: 5px 10px;
+	margin: 5px;	
+}
+.profile-page #invite-result {
+	margin-top: 10px;
+	font-family: verdana, sans-serif;
+	font-size: 13px;
+	color: red;
+
+}
+
 .profile-page .contact-info td {
 	padding: 5px;
 	vertical-align: top;

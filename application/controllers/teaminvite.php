@@ -7,7 +7,8 @@ class Teaminvite extends CI_Controller {
 
 		$this->load->model('model_users');
 
-		$userID = 3;
+		$userID = $_GET['user'];
+		$invitee = $_GET['invite'];
 
 		$data['userteam'] = $this->model_users->get_user_team($userID);
 		$data['user'] = $this->model_users->get_single_user($userID);
@@ -48,7 +49,7 @@ class Teaminvite extends CI_Controller {
 		$this->email->initialize($config);
 
 		$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
-		$this->email->to('stephen@stephencollins.me'); 
+		$this->email->to($invitee); 
 
 
 		$this->email->subject('Join the Grow!');

@@ -55,9 +55,22 @@ echo form_open('formupdate', $attributes);
 </div>
 
 <div class="calendar-area">
-	Change End Date:<br /><br />
-	<?php echo form_input('enddate', $endDate, 'id="datepicker"'); ?><br /><br />
+	<p class="sub-head">Change End Date.</p>
+<?php if (form_error('enddate')) { ?>
+	<p><?php echo form_error('enddate'); ?></p>
+<?php } ?>	
+	<p><?php echo form_input('enddate', $endDate, 'id="datepicker"'); ?></p>
+
 </div>
+
+<div class="invite-area">
+	<p class="sub-head">Send an Invite.</p>
+	<p>Don't grow alone! Invite a friend to help you! Enter an email address in the box below and send someone an invitation to join your team and grow campaign.</p>
+	<p><input type="text" id="invitee" value=""> <a href="#" id="send-invite">Send Invitation</a></p>
+	<br clear="all" />
+	<p id="invite-result"></p>
+</div>	
+
 
 <br clear="all" />
 
@@ -70,9 +83,7 @@ echo form_open('formupdate', $attributes);
 <br clear="all" />
 
 
-<div class="invite-area">
-Send a team invitation.
-</div>	
+
 
 
 <br clear="all" />
@@ -128,8 +139,19 @@ if (isset($pledges)) {
 	}
 }
 ?>
-</script>
+	$("#send-invite").click(function() {
+		
+		invitee = $("#invitee").val();
+		$.get( 
+			"<?php echo base_url(); ?>teaminvite?user=<?php echo $user_id; ?>&invite="+invitee,
+			function(data) {
+			    $('#invite-result').html("Successfully invited " + invitee + ". Feel free to invite another friend.");
+		 	}
+		);
+	});
 
+
+</script>
 
 
 </div>

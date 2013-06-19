@@ -32,3 +32,5 @@ ERROR - 2013-06-19 15:21:51 --> Severity: Notice  --> Trying to get property of 
 ERROR - 2013-06-19 15:21:51 --> Severity: Notice  --> Undefined variable: team /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/controllers/teaminvite.php 17
 ERROR - 2013-06-19 15:21:51 --> Severity: Notice  --> Trying to get property of non-object /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/controllers/teaminvite.php 17
 ERROR - 2013-06-19 15:23:52 --> Severity: Notice  --> Undefined variable: fullname /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/controllers/teaminvite.php 22
+ERROR - 2013-06-19 15:56:55 --> Severity: Notice  --> Use of undefined constant user_id - assumed 'user_id' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/profile.php 143
+ERROR - 2013-06-19 15:56:58 --> Severity: Notice  --> Use of undefined constant user_id - assumed 'user_id' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/profile.php 143
