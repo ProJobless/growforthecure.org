@@ -19,6 +19,7 @@ function index()
 		$this->form_validation->set_rules('color', 'Color', 'required|callback_color_check');
 		$this->form_validation->set_message('matches', 'The Password fields do not match.');
 
+
 		if ($this->form_validation->run() == FALSE)
 		{
 			$data['body_class'] = 'registration-page';
@@ -31,6 +32,7 @@ function index()
 		}
 		else
 		{
+
             $firstname = $this->input->post('firstname');
             $lastname = $this->input->post('lastname');
             $email = $this->input->post('email');
@@ -66,6 +68,7 @@ function index()
 
 
       //      print $firstname . '<br/>' . $lastname . '<br/>' . $email. '<br/>' . $password1 . '<br/>' . $password2 . '<br />' . $enddate . '<br />Team: ' . $team;
+
 
 			$this->db->set('firstName', $firstname);
 			$this->db->set('lastName', $lastname);
@@ -114,11 +117,14 @@ function index()
 				$this->db->insert('tblTeamMembers');
 			}
 			
+			$newDate = new DateTime($enddate);
+			$dateReady = $newDate->format('Y-m-d');
+//			echo $dateReady;
 
 			$this->db->set('growerID', $userID);
 			$this->db->set('teamID', $teamID);
 			$this->db->set('startDate', date("Y-m-d"));
-			$this->db->set('endDate', $enddate);
+			$this->db->set('endDate', $dateReady);
 			$this->db->set('current', 1);
 			$this->db->insert('tblCampaigns');
 

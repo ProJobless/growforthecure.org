@@ -30,14 +30,14 @@ class Notify extends CI_Controller {
 			// LIVE, USE DATA RETURNED IN POST.
 			
 			$custom = $_POST['custom'];
-			list($growerid, $styleid) = explode('-',$custom);	
+			list($growerid, $campaignid, $styleid) = explode('-',$custom);	
 			$grower_name = $growerid;
 			$payer_firstname = $_POST['first_name'];
 			$payer_email = $_POST['payer_email'];
 			$payer_amount = $_POST['mc_gross'];
 		}
 
-		$data['campaigninfo'] = $this->model_users->get_campaign_info($growerid);
+		$data['campaigninfo'] = $this->model_users->get_campaign_info($campaignid);
 
 		foreach ($data['campaigninfo'] as $campaign) {
 			$data['campaign_id'] = $campaign->campaignID;

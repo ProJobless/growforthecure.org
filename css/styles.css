@@ -286,7 +286,17 @@ p.data-copy {
 
 /* REGISTRATION PAGE */
 .registration-page .login {
+	background-color: #ffffcc;
+	width: 780px;
+	margin: 0 auto;
 	margin-bottom: 40px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+.registration-page .login h1 {
+	font-size: 28px;
+	color: black;
 }
 .registration-page .login input[type='text'] {
 	padding: 5px;
@@ -319,13 +329,16 @@ p.data-copy {
 	margin-right: 5%;
 	width: 150px;
 	float: right;
-	background-color: #333;
+	background-color: red;
 	color: white;
 	font-size: 14px;
 	padding: 10px;
 	margin-top: 20px;
 }
-.registration-page div.error { color: red; font-weight: 700; }
+.registration-page div.error, .profile-page div.error { 
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 13px;
+	color: red; font-weight: 300; line-height: 140%;}
 
 /*  PROFILE PAGE STYLES */
 
@@ -369,7 +382,7 @@ p.data-copy {
 	background-color: #cfcfcf;
 	border: 1px solid black;
 }
-
+.profile-page .current-photos img { margin-right: 10px; }
 
 /* ABOUT PAGE STYLES */
 

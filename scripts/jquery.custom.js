@@ -51,6 +51,13 @@ $(document).ready(function(){
 		}
 	});
 
+// SETUP DATE PICKERS
+
+	$( "#datepicker" ).datepicker({
+		maxDate: "+1y",
+		minDate: "+8d",
+
+	});
 
 
 });

@@ -1,13 +1,9 @@
 <div class="inner">
 
 <h1><?php echo $full_name; ?> - Member of Team <?php echo $team_name ?></h1>
-<div class="social-like-bar">
-	facebook, twitter, linkdin, google+
-</div>
+
 <?php if($campaign_remaining < 1) { ?>
-<div class="grow-status">
-	Congratulations! The Grow is over!
-</div>
+<div class="grow-status">The Grow is over! Congratulations!</div>
 <?php } ?>
 
 <br clear="all" />
@@ -27,8 +23,6 @@
 
 <div class="main-content">
 
-	<a href="<?php echo base_url(); ?>profile/<? echo strtolower($first_name); ?>-<?echo strtolower($last_name); ?>/<?php echo $user_id; ?>">Temp link to profile page</a>
-
 	<div class="new-section">
 		<p class="sub-head">Badges Earned.</p>
 		<img src="<?php echo base_url(); ?>artwork/badges.png">
@@ -36,7 +30,9 @@
 
 <?php if (isset($styles_choices)) { ?>
 	<div class="new-section">
-		<p class="sub-head">See the pledges below. Pick one and support <?php echo $full_name; ?>'s grow.</p>
+		<p class="sub-head">Pledge your support to <?php echo $full_name; ?>'s grow.</p>
+		<p>Explain better</p>
+		<br />
 		<div class="image-row">
 		<?php 		
 				foreach ($styles_choices as $choice) {
@@ -45,8 +41,8 @@
 						&amp;cmd=_donations&rm=2
 						&amp;item_name=Support+' . urlencode($full_name) . '+of+Growforthecure.org
 						&amp;item_number=Grow+Style+' . urlencode($choice->styleName) . '&amp;currency_code=USD
-						&amp;notify_url=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=GROWERNAME-'.$choice->StyleID.'
-						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=GROWERNAME-'.$choice->StyleID;
+						&amp;notify_url=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID.'
+						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID;
 
 					if (isset($choice->PledgeAmount)) {
 						$PA = '<span class="pledgeamount">$' . $choice->PledgeAmount . '</span>';
@@ -60,18 +56,18 @@
 		</div>
 		<br clear="all" />
 
-<?php // echo $paypalLink; ?>
-
 	</div>
 
 <?php } ?>
 
 
-
+<?php if ($comments) { ?>
 	<div class="new-section">
-		<p class="sub-head"><?php echo $full_name; ?>'s generous supporters.</p>
+		<p class="sub-head">Some of <?php echo $full_name; ?>'s generous supporters.</p>
 		<p>Comments</p>
 	</div>
+<?php } ?>
+
 
 <?php if($campaign_remaining > 0) { ?>
 	<div class="new-section">

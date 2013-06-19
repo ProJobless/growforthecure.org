@@ -1,77 +1,147 @@
 <div class="inner">
 
-<h1>Already have an account? Log in here.</h1>
+<?php if (!isset($_GET['team'])) { ?>
 
 <div class="login">
 
-<?php
-	$attributes = array('class' => 'log-in', 'id' => 'log-in');
-	echo form_open('login', $attributes);
-?>
+	<h1>Already have an account? Log in here.</h1>
 
-	Email Address : <?php echo form_input('emailaddress', set_value('emailaddress')); ?>
-	Password: <?php echo form_input('password', set_value('password')); ?>
-	<input type="submit" value="Log In" />
+	<?php
+		$attributes = array('class' => 'log-in', 'id' => 'log-in');
+		echo form_open('login', $attributes);
+	?>
 
-</form>
+		Email Address : <?php echo form_input('emailaddress', set_value('emailaddress')); ?>
+		Password: <?php echo form_input('password', set_value('password')); ?>
+		<input type="submit" value="Log In" />
+
+	</form>
 
 </div>
 
-<h1>No Account? Do your part. Become a Grower.</h1>
+<?php } ?>
 
-<p class="sub-head">Let's just start with your basic contact information first.</p>
+<div align="center">
 
-<?php
-$attributes = array('class' => 'registration_form', 'id' => 'registration_form');
-echo form_open('register', $attributes);
-?>
+<?php if (!isset($_GET['team'])) { ?>
+	<h1>No Account? Do your part. Become a Grower.</h1>
+<?php } ?>
 
-<table>
-	<tr>
-		<td>First Name:<?php echo form_error('firstname'); ?></td>
-		<td><?php echo form_input('firstname', set_value('firstname')); ?></td>
-	</tr>
-	<tr>
-		<td>Last Name:<?php echo form_error('lastname'); ?></td>
-		<td><?php echo form_input('lastname', set_value('lastname')); ?></td>
-	</tr>
-	<tr>
-		<td>Email Address:<?php echo form_error('email'); ?></td>
-		<td><?php echo form_input('email', set_value('email')); ?></td>
-	</tr>
-	<tr>
-		<td>Site Password:<?php echo form_error('password1'); ?></td>
-		<td><?php echo form_input('password1', ''); ?></td>
-	</tr>
-	<tr>
-		<td>ReType Password:<?php echo form_error('password2'); ?></td>
-		<td><?php echo form_input('password2', ''); ?></td>
-	</tr>
-	<tr>
-		<td>If you have been invited to join a team, enter your team secret code here:</td>
-		<td><?php echo form_input('secretcode', ''); ?></td>
-	</tr>
-</table>
+	<p class="sub-head">Let's just start with your basic contact information first.</p>
+
+	<?php
+	$attributes = array('class' => 'registration_form', 'id' => 'registration_form');
+	
+	if (isset($_GET['team'])) {
+		echo form_open('register/?team=' . $_GET['team'], $attributes);
+	} else {
+		echo form_open('register', $attributes);
+	}
+
+	?>
+
+	<table>
+		<?php if (form_error('firstname')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('firstname'); ?></td>
+		</tr>
+		<?php } ?>
+		
+		<tr>
+			<td>First Name:</td>
+			<td><?php echo form_input('firstname', set_value('firstname')); ?></td>
+		</tr>
+		<?php if (form_error('lastname')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('lastname'); ?></td>
+		</tr>
+		<?php } ?>
+		
+		<tr>
+			<td>Last Name:</td>
+			<td><?php echo form_input('lastname', set_value('lastname')); ?></td>
+		</tr>
+		<?php if (form_error('email')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('email'); ?></td>
+		</tr>
+		<?php } ?>		
+		<tr>
+			<td>Email Address:</td>
+			<td><?php echo form_input('email', set_value('email')); ?></td>
+		</tr>
+		<?php if (form_error('password1')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('password1'); ?></td>
+		</tr>
+		<?php } ?>
+		<tr>
+			<td>Site Password:</td>
+			<td><?php echo form_input('password1', ''); ?></td>
+		</tr>
+		<?php if (form_error('password2')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('password2'); ?></td>
+		</tr>
+		<?php } ?>		<tr>
+			<td>ReType Password:</td>
+			<td><?php echo form_input('password2', ''); ?></td>
+		</tr>
+		<?php if (isset($_GET['team'])) { ?>
+		<tr>
+			<td>Team invitation code:</td>
+			<td><?php echo form_input('secretcode', $_GET['team'], 'disabled'); ?></td>
+		</tr>
+		<?php } ?>
+	</table>
 
 
-<p class="sub-head">Now let's get to setting up your grow.</p>
+	<p class="sub-head">Now let's get to setting up your grow.</p>
 
-<table>
-	<tr>
-		<td>If starting a new team, what is your team name. If you have entered an invitation code above, you can ignore this:</td>
-		<td><?php echo form_input('teamname', ''); ?></td>
-	</tr>
-	<tr>
-		<td>When would you like your fundraiser to end:<?php echo form_error('enddate'); ?></td>
-		<td><?php echo form_input('enddate', ''); ?></td>
-	</tr>
-	<tr>
-		<td>To prove you are human :), what color is a banana?<?php echo form_error('color'); ?></td>
-		<td><?php echo form_input('color', ''); ?></td>
-	</tr>	<tr>
-		<td></td>
-		<td><div><input type="submit" value="Submit" /></div></td>
-	</tr>
-</table>
+	<table>
+		<?php if (!isset($_GET['team'])) { ?>
+		<tr>
+			<td>Every Grower is a team, even if you are growing alone. Enter your team name below, or your last name will be used as a default.</td>
+			<td><?php echo form_input('teamname', ''); ?></td>
+		</tr>
+		<?php } ?>
+
+		<?php if (form_error('enddate')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('enddate'); ?></td>
+		</tr>
+		<?php } ?>
+
+		<tr>
+			<td>When would you like your fundraiser to end:</td>
+			<td><?php echo form_input('enddate', '', "id='datepicker'"); ?></td>
+		</tr>
+
+		<?php if (form_error('color')) { ?>
+		<tr>
+			<td></td>
+			<td><?php echo form_error('color'); ?></td>
+		</tr>
+		<?php } ?>
+
+
+		<tr>
+			<td>To prove you are human :), what color is a banana?</td>
+			<td><?php echo form_input('color', ''); ?></td>
+		</tr>	<tr>
+			<td></td>
+			<td><div><input type="submit" value="Submit" /></div></td>
+		</tr>
+	</table>
+
+</div>
+
+
 
 </div>

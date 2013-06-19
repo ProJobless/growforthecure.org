@@ -17,9 +17,20 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Francois+One|Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
 
+
+
 </head>
 
 <body class="<?php echo $body_class; ?>">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=148040096614";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="header inner">
 <img id="Image-Maps_22013051914350812" src="<?php echo base_url(); ?>artwork/header-donate-button.png" usemap="#Image-Maps_22013051914350812" border="0" width="610" height="152" alt="" />
@@ -68,4 +79,32 @@
 			</div>
 		</div>
 </div>
+
+<div class="inner" style="margin-top:20px;margin-bottom:50px;">
+
+	<div class="facebook-button left">
+		<div class="fb-like" data-href="https://www.facebook.com/growforthecure.org" data-send="false" data-width="450" data-show-faces="false"></div>
+	</div>
+
+	<div class="twitter-button right">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.growforthecure.org" data-text="Fighting Lung Cancer. Funny Hair. Serious Cause." data-via="growforthecure1">Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</div>
+
+</div>
 <br clear="all" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

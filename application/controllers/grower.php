@@ -63,6 +63,8 @@ class Grower extends CI_Controller {
 		$data['page_title'] = "Grow for the Cure : " . $data['full_name'] . " : Grower Profile";
 		$data['page_description'] = $data['full_name'] . " is growing and shaving his beard to fight Lung Cancer. Donate to his grow campaign to show your support.";
 
+		$data['comments'] = '';
+
 
 		$this->load->view('header', $data);
 		$this->load->view('grower', $data);

@@ -31,6 +31,10 @@ class Formupdate extends CI_Controller {
 		$data['password'] = $this->input->post('password1');
 		$data['full_name'] = strtolower($this->input->post('firstname')) . '-' . strtolower($this->input->post('lastname'));
 
+		$newDate = new DateTime($data['endDate']);
+		$dateReady = $newDate->format('Y-m-d');
+//		echo $dateReady;
+
 		if ($this->form_validation->run() == FALSE)
 		{
 
@@ -65,7 +69,7 @@ class Formupdate extends CI_Controller {
 			$this->db->where('UserID', $data['user_id']);
 			$this->db->update('tblUsers'); 
 
-			$this->db->set('endDate', $data['endDate']);
+			$this->db->set('endDate', $dateReady);
 			$this->db->where('growerID', $data['user_id']);
 			$this->db->where('current', '1');
 			$this->db->update('tblCampaigns'); 
@@ -73,8 +77,28 @@ class Formupdate extends CI_Controller {
 
 
 			redirect('/profile/' . $data['full_name'] . '/' .$data['user_id'], 'refresh');
+
 		}
 
 	}
+	
+	public function check_end_date($d)
+	{		
+
+			$ts1 = strtotime($d);
+			$ts2 = strtotime(date("Y-m-d H:i:s"));
+
+			$seconds_diff = $ts1 - $ts2;
+
+			$time_difference = floor($seconds_diff/3600/24);
+			
+			if ($time_difference > 6) {
+				return TRUE;
+			} else {
+				$this->form_validation->set_message('check_end_date', 'You must select a date at least 7 days in the future.');
+				return FALSE;	
+			}
+	}
+
 }
 ?>

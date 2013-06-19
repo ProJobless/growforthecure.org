@@ -20,20 +20,46 @@ echo form_open('formupdate', $attributes);
 
 <div class="contact-info">
 <table>
+<?php if (form_error('firstname')) { ?>
 	<tr>
-		<td>First Name:<?php echo form_error('firstname'); ?></td>
+		<td></td>
+		<td><?php echo form_error('firstname'); ?></td>
+	</tr>
+<?php } ?>	
+	<tr>
+		<td>First Name:</td>
 		<td><?php echo form_input('firstname', $first_name); ?></td>
 	</tr>
+<?php if (form_error('lastname')) { ?>
 	<tr>
-		<td>Last Name:<?php echo form_error('lastname'); ?></td>
+		<td></td>
+		<td><?php echo form_error('lastname'); ?></td>
+	</tr>
+<?php } ?>	
+
+	<tr>
+		<td>Last Name:</td>
 		<td><?php echo form_input('lastname', $last_name); ?></td>
 	</tr>
+<?php if (form_error('email')) { ?>
 	<tr>
-		<td>Email Address:<?php echo form_error('email'); ?></td>
+		<td></td>
+		<td><?php echo form_error('email'); ?></td>
+	</tr>
+<?php } ?>	
+
+	<tr>
+		<td>Email Address:</td>
 		<td><?php echo form_input('email', $email); ?></td>
 	</tr>
+<?php if (form_error('password1')) { ?>
 	<tr>
-		<td>Set New Password:<?php echo form_error('password1'); ?></td>
+		<td></td>
+		<td><?php echo form_error('password1'); ?></td>
+	</tr>
+<?php } ?>	
+	<tr>
+		<td>Set New Password:</td>
 		<td><?php echo form_input('password1', ''); ?></td>
 	</tr>
 	<tr>
@@ -48,9 +74,18 @@ echo form_open('formupdate', $attributes);
 </div>
 
 <div class="calendar-area">
-	Change End Date:<?php echo form_error('enddate'); ?><br /><br />
-	<?php echo form_input('enddate', $endDate); ?><br /><br />
-	<img src="http://placehold.it/345x300&text=Calendar">
+	<table>
+<?php if (form_error('enddate')) { ?>
+	<tr>
+		<td colspan="2"><?php echo form_error('enddate'); ?></td>
+	</tr>
+<?php } ?>	
+		<tr>
+			<td>Change End Date:&nbsp;&nbsp;</td>
+			<td><?php echo form_input('enddate', $endDate, 'id="datepicker"'); ?></td>
+		</tr>
+
+	</table>
 </div>
 
 <br clear="all" />
@@ -68,7 +103,7 @@ echo form_open('formupdate', $attributes);
 <div class="image-row">
 <?php 
 	foreach ($styles as $row) {
-		echo '<div class="icon"><img alt="' . $row->styleName . '" title="' . $row->styleName . '" src="/artwork/styles/'. $row->fileName . '" /></div>';
+		echo '<div class="icon"><img alt="' . $row->styleName . '" title="' . $row->styleName . '" src="'. base_url() . '/artwork/styles/'. $row->fileName . '" /></div>';
 	}
  ?>
 </div>

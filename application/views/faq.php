@@ -15,7 +15,7 @@
 		<p class="answer">Grow for the Cure is a fundraising website dedicated to increasing the money available for lung cancer research. We are an affiliate of the non-profit Bonnie J. Addario Lung Cancer Foundation and operate under their 501(c)3 status. We have a platform where volunteers can register to grow facial hair. People can select from a grid of facial hair types the volunteer will grow and donate money to their favorite style.</p>
 
 		<p class="question">What is Bonnie J. Addario Lung Cancer Foundation?</p>
-		<p class="answer">The Bonnie J. Addario Lung Cancer Foundation (BJALCF) has grown into the first international collaborative entity of its kind; raising over $6 million for lung cancer research. BJALCF plans, with your help, to become the global leader for lung cancer. Two years after BJALCF began, the Addario Lung Cancer Medical Institute (ALCMI) was created as a spin-off to connect the top thought leaders, scientists, researchers, and physicians worldwide to lead and empower patients toward better treatment options. Their ultimate goal is to increase the inexcusably low survival rate of lung cancer by becoming the largest source of non-profit funding dedicated to turning lung cancer into a manageable chronic disease.</p>
+		<p class="answer">The Lung Cancer Foundation (LCF) is one of the largest patient-driven philanthropies nationwide devoted exclusively to eradicating Lung Cancer through research, awareness, education, early detection and treatment. The Foundation works with diverse partners (physicians, organizations, industry partners, thought leaders, survivors and their families) in taking actions NOW in the laboratory, in hospitals and in the public forum that lead to solutions for patients. Since its founding as a 501(c) 3 non-profit organization in CA in 2006, the LCF has raised more than $10 million dollars for Lung Cancer research, patient services and awareness.</p>
 
 		<p class="question">How is the money raised, used?</p>
 		<p class="answer">All net proceeds are used by the Bonnie J. Addario Lung Cancer Foundation. Their top physicians and researchers select from immediate results-oriented projects that promise to catalyze progress through early detection, genetic testing, drug discovery and patient-focused outcomes.</p>
@@ -24,10 +24,10 @@
 		<p class="answer">We realized the need for a larger partner that has the resources to make the most of your donations.</p>
 
 		<p class="question">Is my donation tax deductible?</p>
-		<p class="answer">Yes, as a qualified non-profit affiliate, all donations are tax deductible. Please visit <a href="http://www.lungcancerfoundation.org/how-to-help/how-to-give/">http://www.lungcancerfoundation.org/how-to-help/how-to-give/</a> for more information.</p>
+		<p class="answer">Yes, as a qualified non-profit affiliate, all donations are tax deductible. Please visit <a href="http://www.lungcancerfoundation.org/contribute/">http://www.lungcancerfoundation.org/contribute/</a> for more information.</p>
 
 		<p class="question">What is your Federal Tax ID number?</p>
-		<p class="answer">Employee Identification Number: 20-4417327 DLN: 17053090042016 Effective Date of Exemption: March 1, 2006 You can download the 501(c)3 letter of determination for your records at <a href="http://www.lungcancerfoundation.org/who-we-are/501c3/">http://www.lungcancerfoundation.org/who-we-are/501c3/</a></p>
+		<p class="answer">Employee Identification Number: 20-4417327 DLN: 17053090042016 Effective Date of Exemption: March 1, 2006</p>
 
 		<p class="question">How can I get involved?</p>
 		<p class="answer">Please visit the BJALCF website or any of the links under the Resources tab for more information on what you can do to make an impact on lung cancer.</p>

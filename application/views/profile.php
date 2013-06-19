@@ -56,9 +56,9 @@ echo form_open('formupdate', $attributes);
 
 <div class="calendar-area">
 	Change End Date:<br /><br />
-	<?php echo form_input('enddate', $endDate); ?><br /><br />
-	<img src="http://placehold.it/345x300&text=Calendar">
+	<?php echo form_input('enddate', $endDate, 'id="datepicker"'); ?><br /><br />
 </div>
+
 <br clear="all" />
 
 <div class="left">
@@ -66,6 +66,13 @@ echo form_open('formupdate', $attributes);
 </div>
 
 </form>
+
+<br clear="all" />
+
+
+<div class="invite-area">
+Send a team invitation.
+</div>	
 
 
 <br clear="all" />
