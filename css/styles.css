@@ -346,13 +346,13 @@ p.data-copy {
 	float: left;
 	width: 600px;
 }
-.profile-page .calendar-area, .profile-page .invite-area {
+.profile-page .calendar-area, .profile-page .invite-area, .share-area {
 	float: right;
 	width: 350px;
 }
 .profile-page .invite-area input[type=text] {
-	width: 95%;
-	padding: 5px;
+	width: 40%;
+	padding: 8px;
 	font-size: 14px;
 }
 .profile-page .invite-area a {
@@ -362,6 +362,7 @@ p.data-copy {
 	background-color: #666;
 	padding: 5px 10px;
 	margin: 5px;	
+	border-radius: 10px;
 }
 .profile-page #invite-result {
 	margin-top: 10px;

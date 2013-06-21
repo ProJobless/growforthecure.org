@@ -17,7 +17,8 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Francois+One|Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
 
-
+	<meta property="og:title" content="Grow for the Cure" />
+	<meta property="og:image" content="http://createdbysteve.com/growforthecure/artwork/logos/GrowLogo-small.jpg" />
 
 </head>
 
