@@ -128,7 +128,7 @@ class Model_users extends CI_Model {
 		if ($query->num_rows() > 0) {
 			return $query->result();
 		} else {
-			redirect(base_url('who'), 'refresh');
+			redirect(base_url('whodat'), 'refresh');
 		}
 
 
