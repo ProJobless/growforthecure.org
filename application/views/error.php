@@ -2,8 +2,10 @@
 
 <?php 
 	echo '<pre>';
-	print_r ($error);
+	print_r ($error[error]);
 	echo '</pre>'; 
+
 ?>
+
 
 </div>

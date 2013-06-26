@@ -120,8 +120,6 @@ class Model_users extends CI_Model {
 	function get_campaign_info($id)
 	{
 		$this->load->helper('date');
-	
-		$this->db->where('endDate <', now());
 		$this->db->where('current = 1');
 		$this->db->where('growerID', $id);
 

@@ -75,3 +75,26 @@ ERROR - 2013-06-26 17:41:34 --> You did not select a file to upload.
 ERROR - 2013-06-26 17:41:34 --> Severity: Notice  --> Undefined offset: 0 /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
 ERROR - 2013-06-26 17:41:45 --> You did not select a file to upload.
 ERROR - 2013-06-26 17:41:52 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:43:21 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:43:55 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:43:55 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:44:03 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:44:03 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:44:24 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:44:24 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:44:24 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 8
+ERROR - 2013-06-26 17:44:32 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:44:32 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:44:42 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:44:42 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:44:50 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:44:50 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:44:50 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 8
+ERROR - 2013-06-26 17:45:10 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:45:10 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:45:10 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 8
+ERROR - 2013-06-26 17:45:27 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:45:27 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
+ERROR - 2013-06-26 17:45:27 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 8
+ERROR - 2013-06-26 17:45:36 --> You did not select a file to upload.
+ERROR - 2013-06-26 17:45:36 --> Severity: Notice  --> Use of undefined constant error - assumed 'error' /Users/scollins/Dropbox/Projects_Sites/growforthecure.org/application/views/error.php 5
