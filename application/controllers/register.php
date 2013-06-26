@@ -43,6 +43,7 @@ function index()
             $secretcode = $this->input->post('secretcode');
             $teamname = $this->input->post('teamname');
 
+
             if (!$secretcode) {
             	if (!$teamname) {
 					$team = $lastname;

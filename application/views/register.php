@@ -93,9 +93,10 @@
 			<td><?php echo form_input('password2', ''); ?></td>
 		</tr>
 		<?php if (isset($_GET['team'])) { ?>
+		<?php echo form_hidden('secretcode', $_GET['team']); ?>
 		<tr>
 			<td>Team invitation code:</td>
-			<td><?php echo form_input('secretcode', $_GET['team'], 'disabled'); ?></td>
+			<td><?php echo form_input('secretcode2', $_GET['team'], 'disabled'); ?></td>
 		</tr>
 		<?php } ?>
 	</table>

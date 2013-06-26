@@ -16,14 +16,7 @@
 </div> <!-- END INNER -->
 
 <br clear="all" />
-
-<div class="easy-banner">
-	
-	<div class="inner" align="center">
-		<img src="<?php echo base_url() ?>artwork/itssoeasy.png">
-	</div>
-
-</div>
+<br clear="all" />
 
 <div class="image-row">
 	<?php 
@@ -33,13 +26,23 @@
 	 ?>
 </div>
 
-
 <div class="easy-banner">
+	
+	<div class="inner" align="center">
+		<img src="<?php echo base_url() ?>artwork/itssoeasy.png">
+	</div>
+
+</div>
+
+
+
+
+<!-- <div class="easy-banner">
 	<div class="inner" align="center">
 		<img src="<?php echo base_url() ?>artwork/ourcurrenttopgrowers.png">
 	</div>
 </div>
-
+ -->
 
 <div class="inner">
 
@@ -55,11 +58,7 @@
 				$photo = base_url() . 'userphotos/' . $photo;
 			}
 
-			echo'<div class="grower">
-
-			
-
-			<a href="' . base_url() . 'grower/' . strtolower($user->firstName) . '-' . strtolower($user->lastName) . '/' . $user->userID .'"><img src="'. $photo . '" /><br/>' . $user->firstName . ' ' . $user->lastName . '</a></div>';
+			echo '<div class="grower"><a href="' . base_url() . 'grower/' . strtolower($user->firstName) . '-' . strtolower($user->lastName) . '/' . $user->userID .'"><img src="'. $photo . '" /><br/>' . $user->firstName . ' ' . $user->lastName . '</a></div>';
 		}
 	?>
 

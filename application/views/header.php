@@ -46,9 +46,9 @@
 
 <div class="social-icons inner">
 	<div class="right">
-		<a href=""><img width="40px" src="<?php echo base_url(); ?>artwork/facebook.png" /></a>
-		<a href=""><img width="40px" src="<?php echo base_url(); ?>artwork/twitter.png" /></a>
-		<a href=""><img width="40px" src="<?php echo base_url(); ?>artwork/mail.png" /></a>
+		<a href="https://www.facebook.com/growforthecure.org" target="_blank"><img width="40px" src="<?php echo base_url(); ?>artwork/facebook.png" /></a>
+		<a href="https://twitter.com/growforthecure1" target="_blank"><img width="40px" src="<?php echo base_url(); ?>artwork/twitter.png" /></a>
+		<a href="mailto:info@growforthecure.org"><img width="40px" src="<?php echo base_url(); ?>artwork/mail.png" /></a>
 	</div>
 </div>
 
