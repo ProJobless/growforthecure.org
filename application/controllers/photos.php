@@ -26,6 +26,7 @@ class Photos extends CI_Controller {
 			$this->load->helper('form');
 			$this->load->library('form_validation');
 
+
 			$data['page_title'] = "Grow for the Cure : Photo Uploading";
 			$data['page_description'] = "Photo Editor";
 			$data['body_class'] = "photos-page";
@@ -37,7 +38,11 @@ class Photos extends CI_Controller {
 
 	function upload_photos()
 	{
+		$this->load->helper('form');
+		$this->load->library('form_validation');
 		
+		$this->form_validation->set_rules('userfile', 'Photo', 'required');
+
 		$config['upload_path'] = './userphotos/';
 		$config['allowed_types'] = 'jpg';
 		$config['max_size']	= '5000';
@@ -46,19 +51,30 @@ class Photos extends CI_Controller {
 
 		$this->load->library('upload', $config);
 
+
+
+		
+
+
 		if ( ! $this->upload->do_upload())
 		{
+
+
 			$data['error'] = array('error' => $this->upload->display_errors());
-			echo '<pre>';
-			print_r ($data['error']);
-			echo '</pre>';
+			
+
+			$data['page_title'] = "Grow for the Cure : Photo Uploading";
+			$data['page_description'] = "Photo Editor";
+			$data['body_class'] = "photos-page";
+
+			$this->load->view('header', $data);
+			$this->load->view('error', $data);
+			$this->load->view('footer', $data);
 
 		}
 		else
 		{
 
-			$this->load->helper('form');
-			$this->load->library('form_validation');
 
 			$data = array('upload_data' => $this->upload->data());
 			
@@ -125,7 +141,6 @@ class Photos extends CI_Controller {
 			redirect('/photos/'.$userID, 'refresh');
 
 		}
-
 	}
 
 	}

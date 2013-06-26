@@ -41,8 +41,8 @@
 						&amp;cmd=_donations&rm=2
 						&amp;item_name=Support+' . urlencode($full_name) . '+of+Growforthecure.org
 						&amp;item_number=Grow+Style+' . urlencode($choice->styleName) . '&amp;currency_code=USD
-						&amp;notify_url=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID.'
-						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID;
+						&amp;notify_url=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-' . $choice->StyleID . '-' . urlencode($full_name) . '
+						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID. '-' . urlencode($full_name);
 
 					if (isset($choice->PledgeAmount)) {
 						$PA = '<span class="pledgeamount">$' . $choice->PledgeAmount . '</span>';

@@ -22,6 +22,12 @@
 <?php echo form_hidden('campaignID', $campaign_id); ?>
 
 <table>
+	<?php if (form_error('userfile')) { ?>
+	<tr>
+		<td></td>
+		<td><?php echo form_error('userfile'); ?></td>
+	</tr>
+	<?php } ?>
 	<tr>
 		<td>Select a photo from your computer.</td>
 		<td><input type="file" name="userfile" size="20" /></td>

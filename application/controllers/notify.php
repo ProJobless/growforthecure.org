@@ -30,9 +30,9 @@ class Notify extends CI_Controller {
 			
 			// LIVE, USE DATA RETURNED IN POST.
 			
-			$custom = $_GET['custom'];
-			list($growerid, $campaignid, $styleid) = explode('-',$custom);	
-			$grower_name = $growerid;
+
+			$custom = $_POST['custom'];
+			list($growerid, $campaignid, $styleid, $grower_name) = explode('-',$custom);	
 			$payer_firstname = $_POST['first_name'];
 			$payer_email = $_POST['payer_email'];
 			$payer_amount = $_POST['mc_gross'];
