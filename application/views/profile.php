@@ -53,7 +53,7 @@ echo form_open('formupdate', $attributes);
 	</tr>
 	<tr>
 		<td>Enter your personal Statement:<?php echo form_error('statement'); ?></td>
-		<td><?php echo form_textarea('statement', $statement); ?></td>
+		<td><?php echo form_textarea('statement', $statement, 'cols=5'); ?></td>
 	</tr>
 </table>
 
@@ -66,15 +66,21 @@ echo form_open('formupdate', $attributes);
 
 
 <div class="invite-area">
-	<p class="sub-head">Send an Invite.</p>
+	<a href="<?php echo base_url(); ?>grower/<? echo str_replace(' ', '-', strtolower($full_name)); ?>/<? echo $user_id; ?>" class="profile-return">Return to your public profile</a>
+	<br clear="all" />
+	<br clear="all" />
+	<p class="sub-head">Send an Invite to your friends.</p>
 	<p>Don't grow alone! Invite a friend to help you! Enter an email address in the box below and send someone an invitation to join your team and grow campaign.</p>
+		<br clear="all" />
+	<br clear="all" />
+
 	<p><input type="text" id="invitee" value=""> <a href="#" id="send-invite">Click to Send Invitation</a></p>
 	<br clear="all" />
 	<p id="invite-result"></p>
 </div>	
 
 <div class="share-area" style="margin-top:10px;">
-	<p class="sub-head">Share your Grow campaign with your friends.</p>
+	<p class="sub-head">Share your campaign with friends.</p>
 
 	<?php 
 	$facebookTitle = 'Grow For The Cure';
@@ -165,12 +171,18 @@ if (isset($pledges)) {
 	$("#send-invite").click(function() {
 		
 		invitee = $("#invitee").val();
-		$.get( 
-			"<?php echo base_url(); ?>teaminvite?user=<?php echo $user_id; ?>&invite="+invitee,
-			function(data) {
-			    $('#invite-result').html("Successfully invited " + invitee + ". Feel free to invite another friend.");
-		 	}
+		if (invitee == "") {
+			// DO NOTHING
+			console.log("No email in box. No email sent.")
+		} else {
+			$.get( 
+				"<?php echo base_url(); ?>teaminvite?user=<?php echo $user_id; ?>&invite="+invitee,
+				function(data) {
+				    $('#invite-result').html("Successfully invited " + invitee + ". Feel free to invite another friend.");
+			 	}
 		);
+		}
+		
 	});
 
 

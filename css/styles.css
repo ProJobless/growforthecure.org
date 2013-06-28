@@ -98,6 +98,7 @@ a.button:hover {
 }
 .subnav a {
 	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 14px;
 	text-transform: uppercase;
 	text-decoration: none;
 	background-color: #666;
@@ -120,7 +121,15 @@ h1 {
 	color: red;
 	padding-bottom: 20px;
 }
-
+td.return a {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+	background-color: red;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+}
 p.sub-head {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 32px; color: red; padding-bottom: 10px;
@@ -351,16 +360,27 @@ p.data-copy {
 	width: 350px;
 }
 .profile-page .invite-area input[type=text] {
-	width: 40%;
+	width: 39%;
 	padding: 8px;
 	font-size: 14px;
 }
+.profile-page .invite-area .profile-return {
+	float: left;
+	font-size: 14px;
+	background-color: #2f4ea5;
+	border-radius: 5px;
+	box-shadow: rgba(255, 255, 255, 0.496094) 0px 1px 2px 0px inset, rgba(0, 0, 0, 0.199219) 0px 1px 0px 0px;
+	color: white;
+	margin: 0px;
+	padding: 13px;
+}
 .profile-page .invite-area a {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
 	float: right;
 	text-decoration: none;
 	color: white;
 	background-color: #666;
-	padding: 5px 10px;
+	padding: 6px 10px;
 	margin: 5px;	
 	border-radius: 10px;
 }
