@@ -31,7 +31,7 @@
 <?php if (isset($styles_choices)) { ?>
 	<div class="new-section">
 		<p class="sub-head">Pledge your support to <?php echo $full_name; ?>'s grow.</p>
-		<p>Explain better</p>
+		<p>Here you can see the styles <?php echo $full_name; ?> is willing to shave his beard to. You can also see which style is winning in pledges, if any. Make a donation of ANY amount to your favorite style by clicking on an icon below.</p>
 		<br />
 		<div class="image-row">
 		<?php 		
@@ -54,6 +54,7 @@
 				}
 		 ?>
 		</div>
+		<br clear="all" />
 		<br clear="all" />
 
 	</div>
@@ -97,6 +98,8 @@
 
 	</div>
 
+		<br clear="all" />
+		<br clear="all" />
 
 <?php } ?>	
 
@@ -105,6 +108,9 @@
 		<p class="sub-head">Personal Statement.</p>
 		<p><?php echo $statement; ?></p>
 	</div>
+			<br clear="all" />
+		<br clear="all" />
+
 <?php } ?>
 
 <?php if (isset($photos)) { ?>
@@ -117,6 +123,9 @@
 		?>
 
 	</div>
+			<br clear="all" />
+		<br clear="all" />
+
 <?php } ?>
 
 
