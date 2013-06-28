@@ -10,7 +10,7 @@ class Donate extends CI_Controller {
 		$data['body_class'] = "donate-page";
 
 		$this->load->view('header', $data);
-//		$this->load->view('donate', $data);
+		$this->load->view('donate', $data);
 		$this->load->view('footer', $data);
 
 	}
