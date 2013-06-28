@@ -1,5 +1,8 @@
 <div class="inner">
 
+<br /><br />
+
+<div align="center">
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_donations">
@@ -13,8 +16,9 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+</div>
 
-
+<br /><br />
 
 
 </div>
