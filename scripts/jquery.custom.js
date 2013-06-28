@@ -54,7 +54,7 @@ $(document).ready(function(){
 // SETUP DATE PICKERS
 
 	$( "#datepicker" ).datepicker({
-		maxDate: "+1y",
+		maxDate: "+6m",
 		minDate: "+8d",
 
 	});

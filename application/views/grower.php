@@ -22,12 +22,13 @@
 
 
 <div class="main-content">
-
+<!--
 	<div class="new-section">
 		<p class="sub-head">Badges Earned.</p>
 		<img src="<?php echo base_url(); ?>artwork/badges.png">
 	</div>
-
+ -->
+ 
 <?php if (isset($styles_choices)) { ?>
 	<div class="new-section">
 		<p class="sub-head">Pledge your support to <?php echo $full_name; ?>'s grow.</p>
