@@ -68,7 +68,7 @@ class Growers extends CI_Controller {
 				}
 
 				foreach ($data['teams'] as $team) {
-					echo '{ "label": "' . $team->teamName . '", "link": "../teams/' . strtolower($team->teamName) . '/' . $team->teamID . '" }';
+					echo '{ "label": "Team ' . $team->teamName . '", "link": "../teams/' . strtolower($team->teamName) . '/' . $team->teamID . '" }';
 				$x = $x+1;
 				if ($x != $numTeams) {
 					echo ',';

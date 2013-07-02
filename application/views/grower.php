@@ -28,7 +28,7 @@
 		<img src="<?php echo base_url(); ?>artwork/badges.png">
 	</div>
  -->
- 
+
 <?php if (isset($styles_choices)) { ?>
 	<div class="new-section">
 		<p class="sub-head">Pledge your support to <?php echo $full_name; ?>'s grow.</p>
@@ -104,7 +104,7 @@
 
 <?php } ?>	
 
-<?php if (isset($statement)) { ?>
+<?php if (isset($statement) && strlen($statement) > 0) { ?>
 	<div class="new-section">
 		<p class="sub-head">Personal Statement.</p>
 		<p><?php echo $statement; ?></p>
@@ -146,7 +146,7 @@
 
 			?>
 			<div class="members">
-				<p><a href="<?php echo base_url(); ?>grower/<?php echo $member->userID; ?>/<?php echo  strtolower($member->firstName) . '-' . strtolower($member->lastName) ?>/"><?php echo $member->firstName . ' ' . $member->lastName; ?></a></p>
+				<p><a href="<?php echo base_url(); ?>grower/<?php echo  strtolower($member->firstName) . '-' . strtolower($member->lastName) ?>/<?php echo $member->userID; ?>"><?php echo $member->firstName . ' ' . $member->lastName; ?></a></p>
 				<?php echo $photo; ?>
 			</div>
 
