@@ -44,6 +44,7 @@ class Teaminvite extends CI_Controller {
 	<tr>
 		<td style="padding:10px;font-family:helvetica,arial,sans-serif;color:black;font-size:14px;line-height:140%;">
 			<p>[GROWER] has invited you to join Team [TEAMNAME] in his fight against Lung Cancer.</p>
+			<p>Join Grow for the Cure, select your beard styles, and then shave your beard like the style that receives the most pledges. What could your face do for Lung Cancer.</p>
 			<p>Join and help the cause by clicking here -> [URL]</p>
 			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
 		</td>
