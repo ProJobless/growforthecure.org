@@ -147,11 +147,26 @@ class Model_users extends CI_Model {
 		}
 
 	}
+	
 	function get_team_from_id($id)
 	{
 	
 		$this->db->where('teamID', $id);
 		$query = $this->db->get('tblTeams');
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			$team = 'Error';
+		}
+
+	}
+	
+	function get_style_from_id($id)
+	{
+	
+		$this->db->where('styleiD', $id);
+		$query = $this->db->get('tblStyles');
 		
 		if ($query->num_rows() > 0) {
 			return $query->result();

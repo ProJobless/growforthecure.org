@@ -39,9 +39,14 @@ class Notify extends CI_Controller {
 		}
 
 		$data['campaigninfo'] = $this->model_users->get_campaign_info($growerid);
+		$data['styleinfo'] = $this->get_style_from_id($styleid);
 
 		foreach ($data['campaigninfo'] as $campaign) {
 			$data['campaign_id'] = $campaign->campaignID;
+		}
+
+		foreach ($data['styleinfo'] as $style) {
+			$data['style_name'] = $style->styleName;
 		}
 
 
@@ -83,7 +88,7 @@ class Notify extends CI_Controller {
 		$html_message = str_replace('[GROWERNAME]', $grower_name, $html_message);
 		$html_message = str_replace('[FIRSTNAME]', $payer_firstname, $html_message);
 		$html_message = str_replace('[GROWERID]', $growerid, $html_message);
-		$html_message = str_replace('[STYLEID]', $styleid, $html_message);
+		$html_message = str_replace('[STYLEID]', $data['style_name'], $html_message);
 
 		$message = '<html><head></head>';
 		$message = $message . $html_message;
