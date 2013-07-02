@@ -30,11 +30,43 @@ class Teaminvite extends CI_Controller {
 
 		$url = base_url() . 'register/?team=' . $teamcode;
 
-		$message = '<html><head></head><body>';
-		$message = $message . '<p>' . $grower . ' has invited you to join his team, Team ' . $teamname . ', to help fight Lung Cancer. Grow for the Cure tries to...</p>';
-		$message = $message . '<p>Join and help the cause by clicking here > ' . $url . '</p>';
 
-		$message = $message . '</body></html>';
+				$html_message = '
+<body style="background-color:#ccc;margin:0;padding:0;">
+
+<div align="center" style="background-color:white;">
+	<br />
+	<img src="' . base_url() . 'artwork/email_artwork/grow_header.gif" />
+	<br />
+</div>
+
+<table width="600px" align="center">
+	<tr>
+		<td style="padding:10px;font-family:helvetica,arial,sans-serif;color:black;font-size:14px;line-height:140%;">
+			<p>[GROWER] has invited you to join Team [TEAMNAME] in his fight against Lung Cancer.</p>
+			<p>Join and help the cause by clicking here -> [URL]</p>
+			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
+		</td>
+	</tr>
+</table>
+	<br />
+	<br />
+	<br />
+	<br />
+</body>
+		';
+
+
+		$message = '<html><head></head>';
+		$message = $message . $html_message;
+		$message = $message . '</html>';
+
+
+		$message = str_replace('[GROWER]', $grower, $message);
+		$message = str_replace('[TEAMNAME]', $teamname, $message);
+		$message = str_replace('[URL]', $url, $message);
+
+
 
 		$this->load->library('email');
 
