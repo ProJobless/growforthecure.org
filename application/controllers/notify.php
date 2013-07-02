@@ -39,7 +39,7 @@ class Notify extends CI_Controller {
 		}
 
 		$data['campaigninfo'] = $this->model_users->get_campaign_info($growerid);
-		$data['styleinfo'] = $this->model_users->get_style_from_id($id);
+		$data['styleinfo'] = $this->model_users->get_style_from_id($styleid);
 
 		foreach ($data['campaigninfo'] as $campaign) {
 			$data['campaign_id'] = $campaign->campaignID;
