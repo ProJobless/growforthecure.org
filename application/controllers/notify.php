@@ -58,7 +58,7 @@ class Notify extends CI_Controller {
 
 
 		$html_message = '
-<body style="background-color:#ccc;margin:0;padding:0;">
+<body style="background-color:#e0e0e0;margin:0;padding:0;">
 
 <div align="center" style="background-color:white;">
 	<br />
