@@ -88,7 +88,7 @@ class Notify extends CI_Controller {
 		$html_message = str_replace('[GROWERNAME]', $grower_name, $html_message);
 		$html_message = str_replace('[FIRSTNAME]', $payer_firstname, $html_message);
 		$html_message = str_replace('[GROWERID]', $growerid, $html_message);
-		$html_message = str_replace('[STYLEID]', $data['style_name'], $html_message);
+		$html_message = str_replace('[STYLE]', $data['style_name'], $html_message);
 
 		$message = '<html><head></head>';
 		$message = $message . $html_message;
