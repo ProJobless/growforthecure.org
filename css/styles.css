@@ -426,6 +426,37 @@ p.data-copy {
 }
 .profile-page .current-photos img { margin-right: 10px; }
 
+/* HALL OF FAME STYLES */
+
+.hall-page .grower, .hall-page .grower a { 
+	float: left; padding-right: 20px;
+	margin-bottom: 20px; height: 350px;
+	font-size: 14px;
+	line-height: 140%;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+}
+.hall-page .grower img { width: 150px; }
+
+p.introPara {
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ABOUT PAGE STYLES */
 
 .about-page .about-copy p { padding-bottom: 10px; font-size: 18px; line-height: 180%; width: 630px; float: right; }

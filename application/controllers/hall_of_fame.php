@@ -5,9 +5,11 @@ class Hall_of_fame extends CI_Controller {
 	function index()
 	{
 		$this->load->model('model_page_data');
+		$this->load->model('model_users');
 
 		$page = 'halloffame';
 		$data['pagecopy'] = $this->model_page_data->get_copy($page);
+		$data['hallusers'] = $this->model_users->get_hall_of_fame();
 
 		foreach ($data['pagecopy'] as $copy) {
 			$data['copy'] = $copy->introCopy;

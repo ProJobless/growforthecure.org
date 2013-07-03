@@ -34,6 +34,20 @@ class Model_users extends CI_Model {
 
 	}
 
+
+	function get_hall_of_fame()
+	{
+
+		$query = $this->db->query('select * from tblUsers where hallOfFame = 1 order by lastName desc');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+
+	}
+
 	function search_for_users($term)
 	{
 
