@@ -428,7 +428,7 @@ p.data-copy {
 
 /* HALL OF FAME STYLES */
 
-.hall-page .grower, .hall-page .grower a { 
+.hall-page .grower, .team-page .member, .hall-page .grower a, .team-page .members a { 
 	float: left; padding-right: 20px;
 	margin-bottom: 20px; height: 350px;
 	font-size: 14px;
@@ -438,7 +438,7 @@ p.data-copy {
 	text-decoration: none;
 	font-family: 'Open Sans', helvetica, arial, sans-serif;
 }
-.hall-page .grower img { width: 150px; }
+.hall-page .grower img, .team-page .members img { width: 150px; }
 
 p.introPara {
 	font-size: 20px;
