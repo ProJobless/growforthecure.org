@@ -54,9 +54,9 @@ class Model_admin extends CI_Model {
 	function hall_promote_demote($id, $pd)
 	{
 		if ($pd == 1) {
-			$query = $this->db->query('Update tblusers set hallOfFame = 1 where userID = ' . $id);
+			$query = $this->db->query('Update tblUsers set hallOfFame = 1 where userID = ' . $id);
 		} else {
-			$query = $this->db->query('Update tblusers set hallOfFame = 0 where userID = ' . $id);
+			$query = $this->db->query('Update tblUsers set hallOfFame = 0 where userID = ' . $id);
 		}
 
 		if ($query) {
