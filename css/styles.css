@@ -533,6 +533,7 @@ p.introPara {
 
 /*  FOOTER STYLE AREA */
 
+
 .footer {
 	background-color: black;
 	color: white;
@@ -552,4 +553,76 @@ p.introPara {
 .footer a {
 	color: white;
 }
+
+
+
+
+/* ADMIN PAGES */
+
+.hall-admin a {
+	text-decoration: none;
+}
+
+a.promote, a.demote {
+	color: red;
+	font-size: 12px;
+	padding: 0 10px;
+}
+.hall-admin ul {
+
+}
+
+.hall-admin ul li {
+	padding: 5px;
+}
+
+.intro-admin textarea {
+	width: 100%;
+	padding: 5px;
+	font-size: 14px;
+	line-height: 140%;
+}
+
+.intro-update-button {
+	text-decoration: none;
+	margin-bottom: 10px;
+	color: white;
+	background-color: red;
+	line-height: 50px;
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+span#result {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	padding-left: 20px;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
