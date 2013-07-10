@@ -1,10 +1,11 @@
 <div class="inner">
 
 	<div class="subnav">
-		<a href="<?php echo base_url(); ?>about/fundraising.php">Fundraising Hints</a>
-		<a href="<?php echo base_url(); ?>about/faq">Frequently asked questions</a>
-		<a href="<?php echo base_url(); ?>about/lung_cancer_facts">Lung Cancer Facts</a>
-		<a href="<?php echo base_url(); ?>about/beards101">Beards 101</a>
+	<a href="<?php echo base_url() ?>about/">About</a>
+	<a href="<?php echo base_url() ?>about/fundraising/">Fundraising Tips</a>
+	<a href="<?php echo base_url() ?>about/faq/">Frequently asked questions</a>
+	<a href="<?php echo base_url() ?>about/lung_cancer_facts/">Lung Cancer Facts</a>
+	<a href="<?php echo base_url() ?>about/beards101/">Beards 101</a>
 	</div>
 
 <br clear="all" />

@@ -53,6 +53,18 @@ class About extends CI_Controller {
 
 	}
 
+	function fundraising()
+	{
+		$data['page_title'] = "Grow for the Cure : Fundraising Tips";
+		$data['page_description'] = "Find out more about Grow for the Cure, and why we do what we do.";
+		$data['body_class'] = "fundraising-page";
+
+		$this->load->view('header', $data);
+		$this->load->view('fundraising', $data);
+		$this->load->view('footer', $data);
+
+	}
+
 
 
 }

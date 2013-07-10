@@ -461,20 +461,20 @@ p.introPara {
 
 .about-page .about-copy p { padding-bottom: 10px; font-size: 18px; line-height: 180%; width: 630px; float: right; }
 
-.faq-page p.faq-header {
+.faq-page p.faq-header, .fundraising-page p.faq-header {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 36px;
 	color: red;
 	padding-top: 20px;
 	padding-left: 50px;
 }
-.faq-page p.question, .beard-page p.question {
+.faq-page p.question, .beard-page p.question, .fundraising-page p.question {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 28px;
 	padding: 10px 0 10px 50px;
 	font-weight: 700;
 }
-.faq-page p.answer, .beard-page p.answer {
+.faq-page p.answer, .beard-page p.answer, .fundraising-page p.answer {
 	font-size: 16px;
 	line-height: 180%;
 	padding-left: 50px;
