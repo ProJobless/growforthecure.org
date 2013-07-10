@@ -79,6 +79,16 @@ class Model_admin extends CI_Model {
 
 	}
 
+	function update_intro_text($p, $c)
+	{
+
+		$data = array ('introCopy' => $c);
+
+		$this->db->where('page', $p);
+		$this->db->update('tblCopy', $data);
+		
+	}
+
 
 
 

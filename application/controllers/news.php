@@ -8,6 +8,7 @@ class News extends CI_Controller {
 
 		$page = 'news';
 		$data['pagecopy'] = $this->model_page_data->get_copy($page);
+		$data['stories'] = $this->model_page_data->get_news();
 
 		foreach ($data['pagecopy'] as $copy) {
 			$data['copy'] = $copy->introCopy;

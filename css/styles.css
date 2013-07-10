@@ -17,6 +17,8 @@ strong { font-weight: 700; }
 outline:none;
 }
 
+.hidden { display: none; }
+
 .absolute { position: absolute; }
 .relative { position: relative; }
 
@@ -274,6 +276,27 @@ p.data-copy {
 	padding: 0 15px;
 }
 
+/*  NEWS PAGE */
+
+p.news-headline {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 28px;
+	text-decoration: underline;
+	padding-left: 20px;
+}
+p.news-story {
+	font-size: 16px;
+	max-width: 90%;
+	padding-left: 55px;
+
+}
+p.news-link {
+	color: #666;
+	padding: 5px 0px 20px 55px;
+}
+p.news-link a {
+	text-decoration: none;
+}
 
 
 
@@ -592,10 +615,12 @@ a.promote, a.demote {
 	padding: 10px 20px;
 	border-radius: 10px;
 }
-span#result {
+.intro-result {
 	font-family: 'Open Sans', helvetica, arial, sans-serif;
 	padding-left: 20px;
 	font-size: 12px;
+	color: red;
+	font-weight: 700;
 }
 
 

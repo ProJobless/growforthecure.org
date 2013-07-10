@@ -36,5 +36,20 @@ class Model_page_data extends CI_Model {
 			}
 	}
 
+	function get_news()
+	{
+		$this->db->order_by('id', 'DESC');
+		$this->db->limit(10);
+
+		$query = $this->db->get('tblNews');
+
+			if ($query->num_rows() > 0) {
+				return $query->result();
+			} else {
+				redirect(base_url('no-news'), 'refresh');
+			}
+	}
+
+
 
 }

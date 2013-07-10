@@ -52,6 +52,16 @@ class Admin extends CI_Controller {
 		$this->load->view('admin_intro_text', $data);
 	}
 
+	function update_intro()
+	{
+		$this->load->model('model_admin');
+
+		$introPage = $this->uri->segment(3);
+		$introCopy = $_POST['copy'];
+
+		$data['updatetext'] = $this->model_admin->update_intro_text($introPage, $introCopy);
+
+	}
 
 
 
