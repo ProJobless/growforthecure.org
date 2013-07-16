@@ -40,6 +40,7 @@ class Notify extends CI_Controller {
 
 		$data['campaigninfo'] = $this->model_users->get_campaign_info($growerid);
 		$data['styleinfo'] = $this->model_users->get_style_from_id($styleid);
+		$data['growerinfo'] = $this->model_users->get_single_user($growerid);
 
 		foreach ($data['campaigninfo'] as $campaign) {
 			$data['campaign_id'] = $campaign->campaignID;
@@ -47,6 +48,10 @@ class Notify extends CI_Controller {
 
 		foreach ($data['styleinfo'] as $style) {
 			$data['style_name'] = $style->styleName;
+		}
+
+		foreach ($data['growerinfo'] as $info) {
+			$data['grower_email'] = $info->emailAddress;
 		}
 
 
@@ -84,15 +89,50 @@ class Notify extends CI_Controller {
 </body>
 		';
 
+		$grower_html_message = '
+		<body style="background-color:#e0e0e0;margin:0;padding:0;">
+
+<div align="center" style="background-color:white;">
+	<br />
+	<img src="' . base_url() . 'artwork/email_artwork/grow_header.gif" />
+	<br />
+</div>
+
+<table width="600px" align="center">
+	<tr>
+		<td style="padding:10px;font-family:helvetica,arial,sans-serif;color:black;font-size:14px;line-height:140%;">
+			<p style="font-size:16px;">Hello, [GROWERNAME].</p>
+			<p>This email is to let you know that a donation for the style, [STYLE], in the amount of $[AMOUNT], has been made to your grow campaign.</p>
+			<p>Thank you for being a part of the fight against Lung Cancer. Any bit of money raised helps the cause.</p>
+			<p>Again, thank you from your friends at <a href="http://growforthecure.org">Grow for the Cure.</a></p>
+			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
+		</td>
+	</tr>
+</table>
+	<br />
+	<br />
+	<br />
+	<br />
+</body>';
 		$html_message = str_replace('[AMOUNT]', $payer_amount, $html_message);
 		$html_message = str_replace('[GROWERNAME]', $grower_name, $html_message);
 		$html_message = str_replace('[FIRSTNAME]', $payer_firstname, $html_message);
 		$html_message = str_replace('[GROWERID]', $growerid, $html_message);
 		$html_message = str_replace('[STYLE]', $data['style_name'], $html_message);
 
+		$grower_html_message = str_replace('[AMOUNT]', $payer_amount, $grower_html_message);
+		$grower_html_message = str_replace('[GROWERNAME]', $grower_name, $grower_html_message);
+		$grower_html_message = str_replace('[FIRSTNAME]', $payer_firstname, $grower_html_message);
+		$grower_html_message = str_replace('[GROWERID]', $growerid, $grower_html_message);
+		$grower_html_message = str_replace('[STYLE]', $data['style_name'], $grower_html_message);
+
 		$message = '<html><head></head>';
 		$message = $message . $html_message;
 		$message = $message . '</html>';
+
+		$grower_message = '<html><head></head>';
+		$grower_message = $grower_message . $grower_html_message;
+		$grower_message = $grower_message . '</html>';
 
 		$this->load->library('email');
 
@@ -108,12 +148,17 @@ class Notify extends CI_Controller {
 
 		$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
 		$this->email->to($payer_email); 
-
-
 		$this->email->subject('Thank you for your donation, ' . $payer_firstname . '.');
 		$this->email->message($message);	
-
 		$this->email->send();
+
+		$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
+		$this->email->to($grower_email); 
+		$this->email->subject('A donation has been made.');
+		$this->email->message($grower_message);	
+		$this->email->send();
+
+
 
 		echo $this->email->print_debugger();
 

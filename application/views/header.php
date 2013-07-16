@@ -62,7 +62,7 @@
 				<a href="<?php echo base_url(); ?>sponsors/">Sponsors</a>
 				<a href="<?php echo base_url(); ?>news/">News</a>
 				<a href="<?php echo base_url(); ?>hall_of_fame/">Hall of Fame</a>
-				<a href="<?php echo base_url(); ?>shop/">Shop</a>
+				<a href="http://www.zazzle.com/growforthecure" target="_blank">Shop</a>
 				<a href="<?php echo base_url(); ?>about/">About</a>
 
 
