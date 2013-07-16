@@ -153,7 +153,7 @@ class Notify extends CI_Controller {
 		$this->email->send();
 
 		$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
-		$this->email->to($grower_email); 
+		$this->email->to($data['grower_email']); 
 		$this->email->subject('A donation has been made.');
 		$this->email->message($grower_message);	
 		$this->email->send();
