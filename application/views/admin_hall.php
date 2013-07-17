@@ -3,6 +3,8 @@
 
 <p>Use this simple tool to move Growers from the ranks of the common grower to Hall of Fame status. They will recieve a badge on their profile page and be recognized on the Hall of Fame page. And if necessary, they can always be sent down in the ranks again.</p>
 
+<p>Simply click the Promote or Demote link next to the name and they will be moved into the appropriate section.</p>
+
 <br />
 
 
@@ -19,7 +21,7 @@
 			echo '<li class=""><a href="' . base_url() . 'grower/' . strtolower($user->firstName) . '-' . strtolower($user->lastName) . '/' . $user->userID .'">' . $user->firstName . ' ' . $user->lastName . '</a><a href="' . base_url() . 'admin/hall_status/' . $user->userID . '/0" class="demote">Demote from Hall &rarr;</a></li>';
 		}
 	} else {
-		echo '<li>No one is worth of the Hall.</li>';
+		echo '<li>No one is worthy of the Hall.</li>';
 	}
 	?>
 </ul>

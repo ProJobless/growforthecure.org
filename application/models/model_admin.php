@@ -9,20 +9,91 @@ class Model_admin extends CI_Model {
 	}
 	
 
+	function get_all_users()
+	{
+		$this->db->order_by('lastName');
+		$query = $this->db->get('tblUsers');
+		
+			if ($query->num_rows() > 0) {
+				return $query->result();
+			} else {
+				redirect(base_url('no-users'), 'refresh');
+			}
+
+
+	}
+
+	function get_top_news()
+	{
+		$this->db->limit(10);
+		$this->db->order_by('id', 'DESC');
+		$query = $this->db->get('tblNews');
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			redirect(base_url('no-users'), 'refresh');
+		}
+
+
+	}
+	function add_news_item($h, $c, $l)
+	{
+
+		$this->db->set('headline', $h);
+		$this->db->set('copy', $c);
+		$this->db->set('link', $l);
+		$query = $this->db->insert('tblNews'); 
+
+		if ($query) {
+			redirect(base_url('admin/news'), 'refresh');
+		} else {
+			return NULL;
+		}
+	}
+
+	function delete_news_item($id)
+	{
+
+
+		$this->db->where('id', $id);
+		$query = $this->db->delete('tblNews'); 
+
+		if ($query) {
+			redirect(base_url('admin/news'), 'refresh');
+		} else {
+			return NULL;
+		}
+	}
+
 	function delete_user_forever($id)
 	{
 
-		$query = $this->db->query('
-				delete from tblUsers where userID = $id;
-				delete from tblCampaigns where growerID = $id;
-				delete from tblPledges where userID = $id;
-				delete from tblTeamMembers where growerID = $id;
-				delete from tblUserPhotos where growerID = $id;
-				delete from tblUserStyles where userID = $id;
-			');
+		$this->db->where('userID', $id);
+		$this->db->delete('tblUsers');
 
-		if ($query->num_rows() > 0) {
-			return $query->result();
+		$this->db->where('growerID', $id);
+		$this->db->delete('tblCampaigns');
+
+		$this->db->where('userID', $id);
+		$this->db->delete('tblPledges');
+
+		$this->db->where('growerID', $id);
+		$this->db->delete('tblTeamMembers');
+
+		$this->db->where('growerID', $id);
+		$this->db->delete('tblUserPhotos');
+
+		$this->db->where('userID', $id);
+		$query = $this->db->delete('tblUserStyles');
+
+
+		// $statement = 'delete from tblUsers where userID = '.$id.'; delete from tblCampaigns where growerID = ' . $id . ';delete from tblTeamMembers where growerID = '.$id.'; delete from tblPledges where userID = ' . $id . '; delete from tblUserPhotos where growerID = ' . $id . '; delete from tblUserStyles where userID = ' . $id . ';';
+
+		// $query = $this->db->query($statement);
+
+		if ($query) {
+			redirect(base_url('admin/delete_user'), 'refresh');
 		} else {
 			return NULL;
 		}

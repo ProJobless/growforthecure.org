@@ -131,6 +131,60 @@ function index()
 
 			$fullName = strtolower($firstname) . '-' . strtolower($lastname);
 
+
+			$registration_email='<body style="background-color:#e0e0e0;margin:0;padding:0;">
+
+<div align="center" style="background-color:white;">
+	<br />
+	<img src="' . base_url() . 'artwork/email_artwork/grow_header.gif" />
+	<br />
+</div>
+
+<table width="600px" align="center">
+	<tr>
+		<td style="padding:10px;font-family:helvetica,arial,sans-serif;color:black;font-size:14px;line-height:140%;">
+			<p style="font-size:16px;">Hello, [FIRSTNAME].</p>
+			<p>This email is being sent to confirm your registration as a Grower on the Grow for the Cure website. Thank you for being a part of the fight against Lung Cancer. Any bit of money raised helps the cause.</p>
+			<p>You can <a href="[PROFILELINK]">click here to be taken right to your profile editing page.</a></p>
+			<p>Again, thank you from your friends at <a href="http://growforthecure.org">Grow for the Cure.</a></p>
+			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
+		</td>
+	</tr>
+</table>
+	<br />
+	<br />
+	<br />
+	<br />
+</body>';
+
+		$registration_email = str_replace('[FIRSTNAME]', $firstname, $registration_email);
+		$registration_email = str_replace('[PROFILELINK]', base_url() . 'profile/' . $fullName . '/' . $userID, $registration_email);
+
+		$message = '<html><head></head>';
+		$message = $message . $registration_email;
+		$message = $message . '</html>';
+
+		$this->load->library('email');
+
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'smtp.mandrillapp.com';
+		$config['smtp_user'] = 'stephen@stephencollins.me';
+		$config['smtp_pass'] = 'IrLx5aS2RPPLc_FcG6cWkQ';
+		$config['smtp_port'] = '587';
+		$config['charset'] = 'iso-8859-1';
+		$config['mailtype'] = 'html';
+
+		$this->email->initialize($config);
+
+		$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
+		$this->email->to($email); 
+		$this->email->subject('Thank you for registering and helping the cause.');
+		$this->email->message($message);	
+		$this->email->send();
+
+
+
+
 			setcookie('userid', $userID, time()+60*60*24*30, '/');
 			setcookie('fullname', $fullName, time()+60*60*24*30, '/');
 

@@ -59,6 +59,8 @@ class Notify extends CI_Controller {
 		$this->db->set('userID', $growerid);
 		$this->db->set('pledgeAmount', $payer_amount);
 		$this->db->set('styleID', $styleid);
+		$this->db->set('pledger', $payer_firstname);
+		$this->db->set('pledgeTime', date("Y-m-d"));
 		$this->db->insert('tblPledges');
 
 

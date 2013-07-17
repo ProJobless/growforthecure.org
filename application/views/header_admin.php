@@ -2,7 +2,7 @@
 <html>
 <head>
 	
-	<title>Grow for the Cure Admin Section</title>
+	<title><?php echo $title; ?></title>
 	
 	<meta charset="UTF-8">
 	<meta name="description" content="Grow for the Cure Admin Section" />
@@ -22,19 +22,29 @@
 
 </head>
 
-<body class="">
- 
-header area.
+<body class="admin-pages">
 
+<div class="inner">
+
+<br clear="all" />
+<br clear="all" />
+
+<h1>Admin for Grow for the Cure.</h1>
+
+
+<ul class="admin-nav">
+	<li><a href="<?php echo base_url(); ?>admin/hall_of_fame">Put Grower in Hall of Fame</a></li>
+	<li><a href="<?php echo base_url(); ?>admin/delete_user">Delete Grower From System</a></li>
+	<li><a href="<?php echo base_url(); ?>admin/news">Add a News/Event</a></li>
+	<li>Add a Sponsor</li>
+	<li><a href="<?php echo base_url(); ?>admin/intro_text">Edit Page Intro Text</a></li>
+</ul>
 
 <br clear="all" />
 <br clear="all" />
 
 
-
-
-
-
+</div>
 
 
 

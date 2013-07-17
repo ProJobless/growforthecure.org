@@ -577,7 +577,10 @@ p.introPara {
 	color: white;
 }
 
-
+/*  WHO PAGE */
+.who li {
+	padding: 5px 0px;
+}
 
 
 /* ADMIN PAGES */
@@ -623,11 +626,25 @@ a.promote, a.demote {
 	font-weight: 700;
 }
 
+ul.admin-nav li {
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
+	font-size: 14px;
+	padding: 10px 0px;
 
+}
+ul.admin-nav li a {
+	color: blue;
+	text-decoration: none;
+	border-bottom: 1px solid blue;
+}
 
-
-
-
+.news-admin input, .news-admin textarea {
+	width: 80%;
+	padding: 5px;
+	font-size: 14px;
+}
+.news-admin a {
+}
 
 
 

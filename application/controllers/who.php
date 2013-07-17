@@ -7,6 +7,7 @@ class Who extends CI_Controller {
 		$this->load->model('model_users');
 
 		$data['users'] = $this->model_users->get_all_users();
+		$data['teams'] = $this->model_users->get_all_teams();
 
 
 		$data['page_title'] = "Grow for the Cure : Unknow User.";

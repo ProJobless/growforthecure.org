@@ -23,8 +23,20 @@ class Model_users extends CI_Model {
 
 	function get_all_users()
 	{
+		$query = $this->db->query('select * from tblUsers order by lastName');
 
-		$query = $this->db->query('select * from tblUsers order by lastName desc');
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return NULL;
+		}
+
+	}
+
+
+	function get_all_teams()
+	{
+		$query = $this->db->query('select * from tblTeams order by teamName');
 
 		if ($query->num_rows() > 0) {
 			return $query->result();
