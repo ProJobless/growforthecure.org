@@ -220,19 +220,6 @@ class Model_users extends CI_Model {
 
 	}
 
-	// function get_active_styles($c, $u)
-	// {
-	// 	$this->db->where('userID', $u);
-	// 	$this->db->where('campaignID', $c);
-	// 	$this->db->join('tblStyles', 'tblStyles.styleID = tblUserStyles.styleID');
-	// 	$query = $this->db->get('tblUserStyles');
-
-	// 	if ($query->num_rows() > 0) {
-	// 		return $query->result();
-	// 	} else {
-	// 		return NULL;
-	// 	}
-	// }
 
 	function get_active_styles_and_pledges($c, $u)
 	{
@@ -277,6 +264,7 @@ class Model_users extends CI_Model {
 
 	}
 
+	
 
 
 

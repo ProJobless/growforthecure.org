@@ -160,6 +160,51 @@ class Model_admin extends CI_Model {
 		
 	}
 
+	function get_all_styles()
+	{
+
+		$query = $this->db->get('tblStyles');
+		
+			if ($query->num_rows() > 0) {
+				return $query->result();
+			} else {
+				redirect(base_url('no-copy'), 'refresh');
+			}
+	}
+
+	function add_cash_donation($s, $g, $c, $cp)
+	{
+
+		$this->db->set('campaignID', $cp);
+		$this->db->set('userID', $g);
+		$this->db->set('pledgeAmount', $c);
+		$this->db->set('styleID', $s);
+		$this->db->set('pledger', 'CASH');
+		$this->db->set('pledgeTime', date("Y-m-d"));
+		$query = $this->db->insert('tblPledges');
+
+		if ($query) {
+			return "Success.";
+		} else {
+			redirect(base_url('no-copy'), 'refresh');
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

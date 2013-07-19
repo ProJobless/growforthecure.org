@@ -123,8 +123,41 @@ class Admin extends CI_Controller {
 
 	}
 
+	function cash()
+	{
+		$this->load->model('model_admin');
+
+		$data['title'] = "Grow for the Cure Admin Area.";
+
+		$data['styles'] = $this->model_admin->get_all_styles();
+		$data['users'] = $this->model_admin->get_all_users();
 
 
+		$this->load->view('header_admin', $data);
+		$this->load->view('admin_cash', $data);
+
+	}
+
+	function cash_update()
+	{
+		$s = $_POST['style'];
+		$g = $_POST['grower'];
+		$c = $_POST['cash'];
+
+		$this->load->model('model_admin');
+		$this->load->model('model_users');
+		$data['campaignInfo'] = $this->model_users->get_campaign_info($g);
+
+		foreach ($data['campaignInfo'] as $info) {
+			$data['campaignID'] = $info->campaignID;
+		}
+
+		$this->model_users->update_user_style($s, $data['campaignID'], $g, 'ins');
+
+		$data['donation'] = $this->model_admin->add_cash_donation($s, $g, $c, $data['campaignID']);
+
+		echo "Successful Donation of $" . $c . ".";
+	}
 
 
 

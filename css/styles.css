@@ -647,7 +647,16 @@ ul.admin-nav li a {
 }
 
 
-
+.cash-admin .cash-button {
+	font-size: 14px;
+	text-decoration: none;
+	margin: 10px;
+	color: white;
+	background-color: red;
+	line-height: 40px;
+	padding: 10px 10px;
+	border-radius: 10px;
+}
 
 
 
