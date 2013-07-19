@@ -38,6 +38,7 @@
 	<li><a href="<?php echo base_url(); ?>admin/news">Add a News/Event</a></li>
 	<li>Add a Sponsor</li>
 	<li><a href="<?php echo base_url(); ?>admin/intro_text">Edit Page Intro Text</a></li>
+	<li>Add a Cash Donation</a></li>
 </ul>
 
 <br clear="all" />
