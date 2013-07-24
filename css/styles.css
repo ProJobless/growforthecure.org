@@ -314,7 +314,9 @@ p.news-link a {
 	font-size: 18px;
 	line-height: 180%;
 }
-
+.sponsor-page .sponsor img {
+	padding: 10px;
+}
 
 /* REGISTRATION PAGE */
 .registration-page .login {
