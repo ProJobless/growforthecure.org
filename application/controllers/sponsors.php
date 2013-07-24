@@ -8,6 +8,7 @@ class Sponsors extends CI_Controller {
 
 		$page = 'sponsors';
 		$data['pagecopy'] = $this->model_page_data->get_copy($page);
+		$data['sponsors'] = $this->model_page_data->get_sponsors();
 
 		foreach ($data['pagecopy'] as $copy) {
 			$data['copy'] = $copy->introCopy;

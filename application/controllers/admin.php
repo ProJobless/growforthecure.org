@@ -160,8 +160,89 @@ class Admin extends CI_Controller {
 	}
 
 
+	function sponsor()
+	{
+		$this->load->helper('form');
+		$this->load->model('model_admin');
+		$this->load->model('model_page_data');
 
+		$data['sponsors'] = $this->model_page_data->get_sponsors();
 
+		$data['title'] = "Grow for the Cure Admin Area.";
+
+		$this->load->view('header_admin', $data);
+		$this->load->view('admin_sponsor', $data);
+	}
+
+	function sponsor_add()
+	{
+		
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('name', 'Sponsor Name', 'required');
+		$this->form_validation->set_rules('link', 'Sponsor Link', 'prep_url|required');
+		$this->form_validation->set_rules('copy', 'Sponsor Copy', 'required');
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->load->model('model_admin');
+			$this->load->model('model_page_data');
+			$data['sponsors'] = $this->model_page_data->get_sponsors();
+
+			$data['title'] = "Grow for the Cure Admin Area.";
+			$this->load->view('header_admin', $data);
+			$this->load->view('admin_sponsor', $data);
+
+//			print_r($data);
+		}
+		else
+		{
+		$sponsorName = $this->input->post('name');
+		$sponsorCopy = $this->input->post('copy');
+		$sponsorLink = $this->input->post('link');
+		$sponsorLogo = '';
+
+		$config['upload_path'] = './artwork/sponsors/';
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size']	= '5000';
+		$config['max_width']  = '0';
+		$config['max_height']  = '0';
+
+		$this->load->library('upload', $config);
+
+			if ( ! $this->upload->do_upload('logo'))
+			{
+				$data['error'] = array('error' => $this->upload->display_errors());
+
+				$this->load->view('admin_sponsor', $data);
+			}
+			else
+			{
+
+				$data = array('upload_data' => $this->upload->data());
+			$sponsorLogo = $data['upload_data']['file_name'];
+
+	//			$this->load->view('upload_success', $data);
+			}
+
+		$this->load->model('model_admin');
+		$data['sponsors'] = $this->model_admin->add_sponsor($sponsorName, $sponsorCopy, $sponsorLogo, $sponsorLink);
+		
+		redirect('/admin/sponsor', 'refresh');
+		}
+
+	}
+
+	function sponsor_delete($i)
+	{
+			$this->load->model('model_admin');
+
+			$id = $_POST['i'];
+
+			$data['deletesponsor'] = $this->model_admin->delete_sponsor($id);
+	}
 
 
 

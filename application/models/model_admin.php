@@ -191,8 +191,27 @@ class Model_admin extends CI_Model {
 
 	}
 
+	function add_sponsor($n, $c, $l, $link)
+	{
+		$this->db->set('sponsorName', $n);
+		$this->db->set('sponsorCopy', $c);
+		$this->db->set('sponsorLogo', $l);
+		$this->db->set('sponsorLink', $link);
 
+		$query = $this->db->insert('tblSponsors');
 
+		if ($query) {
+			return "Success.";
+		} else {
+			redirect(base_url('no-copy'), 'refresh');
+		}
+	}
+
+	function delete_sponsor($id)
+	{
+		$this->db->where('id', $id);
+		$this->db->delete('tblSponsors');
+	}
 
 
 

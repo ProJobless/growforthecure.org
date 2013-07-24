@@ -36,7 +36,7 @@
 	<li><a href="<?php echo base_url(); ?>admin/hall_of_fame">Put Grower in Hall of Fame</a></li>
 	<li><a href="<?php echo base_url(); ?>admin/delete_user">Delete Grower From System</a></li>
 	<li><a href="<?php echo base_url(); ?>admin/news">Add a News/Event</a></li>
-	<li>Add a Sponsor</li>
+	<li><a href="<?php echo base_url(); ?>admin/sponsor">Add a Sponsor</a></li>
 	<li><a href="<?php echo base_url(); ?>admin/intro_text">Edit Page Intro Text</a></li>
 	<li><a href="<?php echo base_url(); ?>admin/cash">Add a Cash Donation</a></li>
 </ul>

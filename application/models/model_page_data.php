@@ -50,6 +50,17 @@ class Model_page_data extends CI_Model {
 			}
 	}
 
+	function get_sponsors()
+	{
+		$query = $this->db->get('tblSponsors');
+
+			if ($query->num_rows() > 0) {
+				return $query->result();
+			} else {
+				redirect(base_url('no-news'), 'refresh');
+			}
+	}
+
 
 
 }
