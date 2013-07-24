@@ -18,7 +18,7 @@
 
 <p class="sub-head"><a target="_blank" href="<?php echo $link; ?>"><?php echo $sponsor->sponsorName; ?></a></p>
 <?php if ($sponsor->sponsorLogo) { ?>
-<img src="<?php echo base_url(); ?>artwork/sponsors/<?php echo $sponsor->sponsorLogo; ?>" width="300px">
+<img src="<?php echo base_url(); ?>artwork/sponsors/<?php echo $sponsor->sponsorLogo; ?>" align="left" width="300px">
 <?php } ?>
 <p class="desc"><?php echo $sponsor->sponsorCopy; ?> <a target="_blank" href="<?php echo $link; ?>">Click for more on <?php echo $sponsor->sponsorName; ?>.</a></p>
 </div>
