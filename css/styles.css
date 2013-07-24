@@ -648,6 +648,19 @@ ul.admin-nav li a {
 .news-admin a {
 }
 
+.sponsor-admin input[type=text] {
+	width: 300px;
+	padding: 5px;
+}
+.sponsor-admin input[type=submit] {
+	font-family: georgia;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 10px;
+	font-size: 16px;
+	background-color: green;
+	color: white;
+}
 
 .cash-admin .cash-button {
 	font-size: 14px;

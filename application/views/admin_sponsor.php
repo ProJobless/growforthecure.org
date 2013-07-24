@@ -1,4 +1,4 @@
-<div class="inner news-admin">
+<div class="inner sponsor-admin">
 
 
 <p>Use this page to Add, Edit, and Delete items that will appear on the News and Events page of the website.</p>
@@ -35,7 +35,8 @@
 <?php echo form_error('logo'); ?>
 <?php echo form_upload('logo', set_value('logo')); ?>
 
-<input type="submit" value="upload" />
+<br /><br />
+<input type="submit" value="Add Sponsor" />
 
 </form>
 

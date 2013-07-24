@@ -147,3 +147,6 @@ ERROR - 2013-07-24 15:22:43 --> Severity: Warning  --> Missing argument 1 for Ad
 ERROR - 2013-07-24 15:22:45 --> Severity: Warning  --> Missing argument 1 for Admin::sponsor_delete() /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/admin.php 238
 ERROR - 2013-07-24 15:22:47 --> Severity: Warning  --> Missing argument 1 for Admin::sponsor_delete() /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/admin.php 238
 ERROR - 2013-07-24 15:24:09 --> Severity: Warning  --> Missing argument 1 for Admin::sponsor_delete() /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/admin.php 238
+ERROR - 2013-07-24 15:36:43 --> You did not select a file to upload.
+ERROR - 2013-07-24 15:36:43 --> Severity: Notice  --> Undefined variable: sponsors /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/views/admin_sponsor.php 48
+ERROR - 2013-07-24 15:37:04 --> Severity: Warning  --> Missing argument 1 for Admin::sponsor_delete() /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/admin.php 238
