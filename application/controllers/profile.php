@@ -27,7 +27,7 @@ class Profile extends CI_Controller {
 		$this->load->model('model_users');
 		$this->load->model('model_page_data');
 
-		$data['styles'] = $this->model_page_data->get_style_icons(14, 'ASC');
+		$data['styles'] = $this->model_page_data->get_style_icons(26, 'ASC');
 
 
 		$data['singleuser'] = $this->model_users->get_single_user($user_to_get);
