@@ -316,6 +316,9 @@ p.news-link a {
 }
 .sponsor-page .sponsor img {
 	padding: 10px;
+	float: left;
+	max-width: 300px;
+	max-height: 300px;
 }
 
 /* REGISTRATION PAGE */
