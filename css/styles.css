@@ -677,7 +677,21 @@ ul.admin-nav li a {
 
 
 
+/*  TERMS AND CONDITIONS. */
 
+.terms-page ol, .terms-page ul, .privacy-page ol, .privacy-page ul {
+	margin-left: 20px;
+}
+.terms-page ol li, .privacy-page ol li {
+	padding: 8px;
+	list-style-type: decimal;
+	line-height: 140%;
+}
+.terms-page ul li, .privacy-page ul li {
+	padding: 8px;
+	list-style-type: disc;
+	line-height: 140%;
+}
 
 
 

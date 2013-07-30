@@ -9,7 +9,7 @@
 			</div>
 			
 			<div class="column">
-				<p>All rights reserved. Content is &copy;2013 Grow for the Cure. <br />Click to read our <a href="">Terms and Conditions</a> or our <a href="">Privacy Policy</a></p>
+				<p>All rights reserved. Content is &copy;2013 Grow for the Cure. <br />Click to read our <a href="<?php echo base_url(); ?>terms">Terms and Conditions</a> or our <a href="<?php echo base_url(); ?>privacy">Privacy Policy</a></p>
 			</div>
 			
 			<div class="column">
