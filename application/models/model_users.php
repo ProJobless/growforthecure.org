@@ -160,6 +160,42 @@ class Model_users extends CI_Model {
 
 	}
 
+	function get_comments($id)
+	{
+		$this->db->where('growerID', $id);
+		$query = $this->db->get('tblComments');
+
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			// Return nothing. No comments.
+		}
+
+
+	}
+
+	function get_badges($id)
+	{
+		$this->db->where('growerID', $id);
+		$query = $this->db->get('tblUserBadges');
+
+
+
+		if ($query->num_rows() > 0) {
+
+			foreach ($query->result_array() as $row) {
+				//$bID = $row['badgeID'];
+				$update = $this->db->query('select badgeName from tblBadges where id = '.$row['badgeID']);
+				return $update->result();
+			}
+
+		} else {
+			// Return nothing. No comments.
+		}
+
+
+	}
+
 	function get_team_from_code($code)
 	{
 	

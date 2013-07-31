@@ -22,12 +22,17 @@
 
 
 <div class="main-content">
-<!--
+
+
+<?php if (isset($badges)) { ?>
 	<div class="new-section">
 		<p class="sub-head">Badges Earned.</p>
-		<img src="<?php echo base_url(); ?>artwork/badges.png">
+		<?php foreach ($badges as $badge) {
+
+			echo $badge->badgeName;
+		} ?>
 	</div>
- -->
+<?php } ?>
 
 <?php if (isset($styles_choices)) { ?>
 	<div class="new-section">
@@ -43,7 +48,7 @@
 						&amp;item_name=Support+' . urlencode($full_name) . '+of+Growforthecure.org
 						&amp;item_number=Grow+Style+' . urlencode($choice->styleName) . '&amp;currency_code=USD
 						&amp;notify_url=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-' . $choice->StyleID . '-' . urlencode($full_name) . '
-						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fnotify&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID. '-' . urlencode($full_name);
+						&amp;return=http%3A%2F%2Fcreatedbysteve.com%2fgrowforthecure%2Fthanks&custom=' . $user_id . '-' . $campaign_id . '-'.$choice->StyleID. '-' . urlencode($full_name);
 
 					if (isset($choice->PledgeAmount)) {
 						$PA = '<span class="pledgeamount">$' . $choice->PledgeAmount . '</span>';
@@ -63,11 +68,21 @@
 <?php } ?>
 
 
-<?php if ($comments) { ?>
+<?php if (isset($comments)) { ?>
 	<div class="new-section">
-		<p class="sub-head">Some of <?php echo $full_name; ?>'s generous supporters.</p>
-		<p>Comments</p>
+		<p class="sub-head">Some of <?php echo $full_name; ?>'s generous supporters wishing him the best.</p>
+		<table class="comment-table">
+			<?php foreach ($comments as $comment) { ?>
+				<tr>
+					<td width="100px"><?php echo $comment->commenterName; ?></td>
+					<td><?php echo $comment->comment; ?></td>
+				</tr>
+			<?php } ?>
+		</table>
 	</div>
+			<br clear="all" />
+		<br clear="all" />
+
 <?php } ?>
 
 

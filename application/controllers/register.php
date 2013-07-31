@@ -75,6 +75,7 @@ function index()
 			$this->db->set('lastName', $lastname);
 			$this->db->set('emailAddress', $email);
 			$this->db->set('password', $password1);
+			$this->db->set('dateJoined', date("Y-m-d"));
 			$this->db->insert('tblUsers');
 
 			$this->db->where('emailAddress', $email);
@@ -147,7 +148,7 @@ function index()
 			<p>This email is being sent to confirm your registration as a Grower on the Grow for the Cure website. Thank you for being a part of the fight against Lung Cancer. Any bit of money raised helps the cause.</p>
 			<p>You can <a href="[PROFILELINK]">click here to be taken right to your profile editing page.</a></p>
 			<p>Again, thank you from your friends at <a href="http://growforthecure.org">Grow for the Cure.</a></p>
-			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
+			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research. BJALCF&apos;s Tax ID#: 20-4417327</p>
 		</td>
 	</tr>
 </table>

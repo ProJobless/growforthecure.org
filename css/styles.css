@@ -204,6 +204,7 @@ div.new-section { margin: 10px 0; }
 .grower-page .image-row .icon {
 	float: left;
 	padding-right: 75px;
+	padding-bottom: 20px;
 }
 .grower-page .pledgeamount {
 	background-color:rgba(255,0,0,1);
@@ -223,6 +224,20 @@ div.new-section { margin: 10px 0; }
 	background-color: red;
 	text-align: center;
 	color: white;
+}
+.grower-page .comment-table {
+	width: 95%;
+}
+.grower-page .comment-table td:first-child {
+	background-color: red;
+	color: white;
+
+}
+.grower-page .comment-table td {
+	padding: 10px;
+}
+.grower-page .comment-table tr {
+	border: 1px solid black;
 }
 
 
@@ -275,6 +290,8 @@ p.data-copy {
 	width: 50px;
 	padding: 0 15px;
 }
+
+
 
 /*  NEWS PAGE */
 

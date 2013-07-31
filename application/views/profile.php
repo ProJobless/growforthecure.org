@@ -7,7 +7,7 @@
 	<a href="<?php echo base_url() ?>about/lung_cancer_facts/">Lung Cancer Facts</a>
 	<a href="<?php echo base_url() ?>about/beards101/">Beards 101</a>
 	</div>
-
+<p>Thank you for registering. Keep us out of your spam and junk folders by adding us to your contact list.</p>
 <br clear="all" />
 
 <?php if (isset($sorry)) {
@@ -70,7 +70,7 @@ echo form_open('formupdate', $attributes);
 	<a href="<?php echo base_url(); ?>grower/<? echo str_replace(' ', '-', strtolower($full_name)); ?>/<? echo $user_id; ?>" class="profile-return">Return to your public profile</a>
 	<br clear="all" />
 	<br clear="all" />
-	<p class="sub-head">Send an Invite to your friends.</p>
+	<p class="sub-head">Invite your friends to your team.</p>
 	<p>Don't grow alone! Invite a friend to help you! Enter an email address in the box below and send someone an invitation to join your team and grow campaign.</p>
 		<br clear="all" />
 	<br clear="all" />

@@ -79,7 +79,7 @@ class Notify extends CI_Controller {
 			<p style="font-size:16px;">Thank you, [FIRSTNAME].</p>
 			<p>You have successfully donated $[AMOUNT] to [GROWERNAME] grow campaign to fight Lung Cancer. You have pledged your money to the [STYLE] style. If [STYLE] receives the most pledges, [GROWERNAME] will shave his beard to match that style.</p>
 			<p>Again, thank you from your friends at <a href="http://growforthecure.org">Grow for the Cure.</a></p>
-			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
+			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research. BJALCF&apos;s Tax ID#: 20-4417327</p>
 			<p style="font-size:10px;">Grower ID : [GROWERID] Style ID : [STYLEID]</p>
 		</td>
 	</tr>
@@ -107,7 +107,7 @@ class Notify extends CI_Controller {
 			<p>This email is to let you know that a donation for the style, [STYLE], in the amount of $[AMOUNT], has been made to your grow campaign.</p>
 			<p>Thank you for being a part of the fight against Lung Cancer. Any bit of money raised helps the cause.</p>
 			<p>Again, thank you from your friends at <a href="http://growforthecure.org">Grow for the Cure.</a></p>
-			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research.</p>
+			<p style="font-size:12px;">All net proceeds will be used by the Bonnie J. Addario Lung Cancer Foundation on the front lines of lung cancer research. BJALCF&apos;s Tax ID#: 20-4417327</p>
 		</td>
 	</tr>
 </table>
