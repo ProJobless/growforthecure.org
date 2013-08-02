@@ -29,3 +29,5 @@ ERROR - 2013-08-02 12:28:20 --> Severity: Notice  --> Undefined variable: memner
 ERROR - 2013-08-02 12:37:29 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'growerID not in (select growerID from tblBadges where badgeID = 3' at line 1
 ERROR - 2013-08-02 12:37:41 --> Query error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'growerID not in (select growerID from tblBadges where badgeID = 3)' at line 1
 ERROR - 2013-08-02 12:38:06 --> Query error: Unknown column 'badgeID' in 'where clause'
+ERROR - 2013-08-02 13:10:03 --> Severity: Notice  --> Undefined index: pledgeAmount /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/badges.php 76
+ERROR - 2013-08-02 13:10:03 --> Severity: Notice  --> Undefined index: pledgeAmount /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/badges.php 76
