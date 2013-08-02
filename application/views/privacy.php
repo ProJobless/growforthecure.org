@@ -6,9 +6,7 @@
 
 <p>Grow for the Cure collects information from you when you register on our site, place an order, or subscribe to the Bonnie J. Addario Lung Cancer newsletter.</p>
 
-<p>When registering on growforthecure.org, as appropriate, you may be asked to enter your: first and last name, email address, password, birth date and zip code.</p>
-
-<p>In the case of contributions or product ordering: We process standard credit card information (card number, card type, expiration date) via a secure, encrypted SSL session. SSL is the proven standard for secure web messaging transactions.</p>
+<p>When registering on growforthecure.org, as appropriate, you may be asked to enter your: first and last name, email address, and create a password.</p>
 
 <p class="sub-head">What do we use your information for?</p>
 
@@ -17,7 +15,6 @@
 <ul>
 	<li>To personalize your experience (Your information helps us to better respond to you individual needs)</li>
 	<li>To improve customer service (We continually strive to improve our website offerings based on the information and feedback we receive from you)</li>
-	<li>To process transactions</li>
 	<li>To display donation amounts on our website</li>
 	<li>To administer a contest, survey or other site feature</li>
 	<li>To send periodic emails (The email address you provide may be used to send you information, respond to inquires, and/or other requests or questions)</li>
@@ -27,15 +24,13 @@
 
 <p class="sub-head">How do we protect your information?</p>
 
-<p>We implement a variety of security measures to maintain the safety of your personal information when you place an order or enter, submit, or access your personal information.</p>
+<p>We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information.</p>
 
 <p>We offer the use of a secure server. All supplied sensitive/credit information is transmitted via Secure Socket Layer (SSL) technology and then encrypted into our Payment gateway providers database only to be accessible by those authorized with special access rights to such systems, and are required to keep the information confidential.</p>
 
-<p>After a transaction, your private information (credit card, birth date and address) will not be stored on our servers.</p>
-
 <p class="sub-head">Do we disclose any information to outside parties?</p>
 
-<p.We do not sell, trade or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policy, or protect ours or others rights, property, or safety.</p.We>
+<p.We do not sell, trade or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policy, or protect ours or others rights, property, or safety.</p>
 
 <p class="sub-head">Online privacy policy only.</p>
 
@@ -43,7 +38,7 @@
 
 <p class="sub-head">Terms and Conditions</p>
 
-<p>Please also visit the Terms and Conditions section establishing the use, disclaimers, and limitations of liability governing the use of our website at <a href="http://growforthecure.org">www.GrowfortheCure.org</a></p>
+<p>Please also visit the Terms and Conditions section establishing the use, disclaimers, and limitations of liability governing the use of our website at <a href="http://growforthecure.org/terms">www.GrowfortheCure.org/terms</a></p>
 
 <p class="sub-head">Your consent</p>
 

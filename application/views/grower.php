@@ -28,8 +28,16 @@
 	<div class="new-section">
 		<p class="sub-head">Badges Earned.</p>
 		<?php foreach ($badges as $badge) {
-
-			echo $badge->badgeName;
+			if ($badge->badgeID == 1){
+				$icon = 'New In Town Badge';
+			} elseif ($badge->badgeID == 2) {
+				$icon = 'First Donation is Free Badge';
+			} elseif ($badge->badgeID == 3) {
+				$icon = 'No Man Left Behind Badge';
+			} elseif ($badge->badgeID == 4) {
+				$icon = 'Band of Brothers Badge';
+			}
+			echo $icon . '</br />';
 		} ?>
 	</div>
 <?php } ?>

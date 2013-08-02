@@ -184,9 +184,7 @@ class Model_users extends CI_Model {
 		if ($query->num_rows() > 0) {
 
 			foreach ($query->result_array() as $row) {
-				//$bID = $row['badgeID'];
-				$update = $this->db->query('select badgeName from tblBadges where id = '.$row['badgeID']);
-				return $update->result();
+				return $query->result();
 			}
 
 		} else {
