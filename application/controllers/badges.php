@@ -51,10 +51,10 @@ class Badges extends CI_Controller {
 			// DO NOTHING. 
 		}
 
-		// BADN OF BROTHERS BADGE
-		$noman = $this->db->query('select distinct teamID from tblTeams');
-		if ($noman->num_rows() > 0) {
-			foreach ($noman->result_array() as $row) {
+		// BAND OF BROTHERS BADGE
+		$band = $this->db->query('select distinct teamID from tblTeams');
+		if ($band->num_rows() > 0) {
+			foreach ($band->result_array() as $row) {
 				$uID = $row['teamID'];
 				$teamcount = $this->db->query('select growerID from tblTeamMembers where teamID = ' . $uID . ' and growerID not in (select growerID from tblUserBadges where badgeID = 3)');
 						if (count($teamcount->result_array()) > 3 && count($teamcount->result_array()) < 10){
@@ -68,6 +68,21 @@ class Badges extends CI_Controller {
 		} else {
 			// DO NOTHING. 
 		}
+
+		// HELPFUL BADGE
+		$helpful = $this->db->query('select  userID, sum(pledgeAmount) from tblPledges where userID not in (select growerID from tblUserBadges where badgeID = 5) group by userID ');
+		if ($helpful->num_rows() > 0) {
+			foreach ($helpful->result_array() as $row) {
+				$uID = $row['userID'];
+				echo $uID;
+				$update = $this->db->query('INSERT INTO tblUserBadges (growerID, badgeID) VALUES (' . $uID . ', 5)');
+
+			}
+
+		} else {
+			// DO NOTHING. 
+		}
+
 
 
 

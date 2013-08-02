@@ -36,6 +36,24 @@
 				$icon = 'No Man Left Behind Badge';
 			} elseif ($badge->badgeID == 4) {
 				$icon = 'Band of Brothers Badge';
+			} elseif ($badge->badgeID == 5) {
+				$icon = 'Helpful Badge';
+			} elseif ($badge->badgeID == 6) {
+				$icon = 'Charitable Badge';
+			} elseif ($badge->badgeID == 7) {
+				$icon = 'Humanitarian Badge';
+			} elseif ($badge->badgeID == 8) {
+				$icon = 'The Flash Badge';
+			} elseif ($badge->badgeID == 9) {
+				$icon = 'Fly on the Wall Badge';
+			} elseif ($badge->badgeID == 10) {
+				$icon = 'Bird Egg Badge';
+			} elseif ($badge->badgeID == 11) {
+				$icon = 'Social Butterfly Badge';
+			} elseif ($badge->badgeID == 12) {
+				$icon = 'Mass Mailer Badge';
+			} elseif ($badge->badgeID == 13) {
+				$icon = 'Vanity Badge';
 			}
 			echo $icon . '</br />';
 		} ?>
