@@ -121,7 +121,7 @@ echo form_open('formupdate', $attributes);
 <br clear="all" />
 
 <h1>Update your available grow styles.</h1>
-
+<p>Choose 3 to 5 styles as to not confuse your potential donors. You may add and remove selected styles at anytime, as long as the style hasn't recieved any pledges.</p>
 <div class="image-row">
 <?php 
 	foreach ($styles as $row) {
