@@ -119,6 +119,25 @@ class Badges extends CI_Controller {
 
 
 
+		// VANITY BADGE
+		$vanity = $this->db->query('select growerID, count(growerID) as PhotoCount from tblUserPhotos where growerID not in (select growerID from tblUserBadges where badgeID = 13) group by growerID');
+		if ($vanity->num_rows() > 0) {
+			foreach ($vanity->result_array() as $row) {
+				if ($row['PhotoCount'] > 9) {
+					$uID = $row['growerID'];
+					//echo $uID;
+					$update = $this->db->query('INSERT INTO tblUserBadges (growerID, badgeID) VALUES (' . $uID . ', 13)');
+				}
+			}
+
+		} else {
+			// DO NOTHING. 
+		}
+
+
+
+
+
 
 
 

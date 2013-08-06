@@ -575,7 +575,9 @@ p.introPara {
 }
 .photos-page .photo {
 	float: left;
-	width: 110px;
+	max-width: 110px;
+	max-height: 200px;
+	height: 200px;
 }
 
 /*  FOOTER STYLE AREA */
