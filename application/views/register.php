@@ -17,6 +17,10 @@
 
 	</form>
 
+	<p class="forgot-password"><a href="<?php echo base_url(); ?>register/forgot">I forgot my password!</a></p>
+
+	<br clear="all" />
+
 </div>
 
 <?php } ?>

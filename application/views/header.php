@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui-1.10.3.custom.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/<?php echo base_url(); ?>scripts/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>

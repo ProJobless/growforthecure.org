@@ -158,11 +158,22 @@
 <?php if (isset($photos)) { ?>
 	<div class="new-section">
 		<p class="sub-head">See All of <?php echo $full_name; ?>'s Current Photos</p>
+				<p>Select any photo to see it larger and with captions (when available).</p>
+
 		<?php 
 				foreach ($photos as $photo) {
-					echo '<img style="padding-right:10px;" src="' . base_url() . 'userphotos/' . $photo->photoImage . '" width="100px">';
+					if($photo->photoCaption){
+						$caption = 'alt="' . $photo->photoCaption . '"';
+					} else {
+						$caption = "";
+					}
+
+					echo '<a class="fancybox" rel="group" href="' . base_url() . 'userphotos/' . $photo->photoImage . '"><img '.$caption.' style="padding-right:10px;" src="' . base_url() . 'userphotos/' . $photo->photoImage . '" width="100px"></a>';
 				}
+
 		?>
+
+
 
 	</div>
 			<br clear="all" />
@@ -174,7 +185,7 @@
 
 	<div class="new-section">
 		<p class="sub-head">See All Members of Team <?php echo $team_name ?></p>
-		
+
 		<?php 
 
 		foreach ($teammembers as $member) {
@@ -199,6 +210,18 @@
 
 </div>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+		    beforeShow : function() {
+        		var alt = this.element.find('img').attr('alt');
+        		this.inner.find('img').attr('alt', alt);
+        		this.title = alt;
+		    }
+
+		});
+	});
+</script>
 
 
 </div>

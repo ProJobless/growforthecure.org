@@ -101,6 +101,23 @@ class Model_users extends CI_Model {
 
 	}
 
+	function get_user_by_email($email)
+	{
+		$this->db->where('emailAddress', $email);
+		$query = $this->db->get('tblUsers');
+		
+		if ($query->num_rows() > 0) {
+			return $query->result();
+		} else {
+			return 0;
+		}
+
+	}
+
+
+
+
+
 	function get_user_team($id)
 	{
 		$this->db->where('growerID', $id);

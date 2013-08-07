@@ -394,6 +394,26 @@ p.news-link a {
 	font-size: 13px;
 	color: red; font-weight: 300; line-height: 140%;}
 
+.registration-page .forgot-password a {
+	padding: 15px 0 0 0;
+	float: right;
+	color: red;
+	
+}
+table.update-password td {
+	padding: 5px;
+}
+
+table.update-password td input {
+	padding: 5px;
+	width: 200px;
+}
+
+table.update-password td input[type=submit] {
+	font-size: 16px;
+	width: 140px;
+}
+
 /*  PROFILE PAGE STYLES */
 
 .profile-page .contact-info {

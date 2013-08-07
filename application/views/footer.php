@@ -25,6 +25,9 @@
 </div>
 
 	<script src="<?php echo base_url(); ?>scripts/jquery.custom.js"></script>
+	<script src="<?php echo base_url(); ?>scripts/jquery.fancybox.pack.js"></script>
+	<script src="<?php echo base_url(); ?>scripts/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script src="<?php echo base_url(); ?>scripts/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
 <script type="text/javascript">
 

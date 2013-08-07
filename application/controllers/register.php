@@ -234,6 +234,75 @@ function index()
 		}
 	}
 
+	public function forgot()
+	{
+			$this->load->helper('form');
+
+			$data['reason'] = $this->uri->segment(3);
+
+
+			$data['body_class'] = 'forgot-page';
+			$data['page_title'] = "Grow for the Cure : Forgot your password";
+			$data['page_description'] = "Use this page to set a new password for your account.";
+
+			$this->load->view('header', $data);
+			$this->load->view('forgot', $data);
+			$this->load->view('footer', $data);
+
+	}
+
+	public function send_email()
+	{
+		$email = $_POST['email'];
+
+		if (!$email) {
+			redirect('/register/forgot/no_email', 'refresh');
+		}
+		
+		$this->load->model('model_users');
+		$usercheck = $this->model_users->get_user_by_email($email);
+		//echo $data['usercheck'];
+
+		if ($usercheck == 0) {
+			redirect('/register/forgot/no_user', 'refresh');
+		} elseif ($usercheck != 0) {
+
+			foreach ($usercheck as $user) {
+				$userID = $user->userID;
+				$code = $user->password;
+			}
+
+			$message = 'To reset the password for your Grow for the Cure account click on this link -> '.
+			base_url() .'password/update/'. $userID . '/' . $code;
+
+			$this->load->library('email');
+
+			$config['protocol'] = 'smtp';
+			$config['smtp_host'] = 'smtp.mandrillapp.com';
+			$config['smtp_user'] = 'stephen@stephencollins.me';
+			$config['smtp_pass'] = 'IrLx5aS2RPPLc_FcG6cWkQ';
+			$config['smtp_port'] = '587';
+			$config['charset'] = 'iso-8859-1';
+			$config['mailtype'] = 'html';
+
+			$this->email->initialize($config);
+
+			$this->email->from('do_not_reply@growforthecure.org', 'Grow for the Cure');
+			$this->email->to($email); 
+			$this->email->subject('Password reset request.');
+			$this->email->message($message);	
+			$this->email->send();
+
+			redirect('/register/forgot/good_user', 'refresh');
+		}
+
+
+	}
+
+
+
+
+
 
 }
 
