@@ -30,7 +30,7 @@
 
 <p class="sub-head">Do we disclose any information to outside parties?</p>
 
-<p.We do not sell, trade or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policy, or protect ours or others rights, property, or safety.</p>
+<p>We do not sell, trade or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential. We may also release your information when we believe release is appropriate to comply with the law, enforce our site policy, or protect ours or others rights, property, or safety.</p>
 
 <p class="sub-head">Online privacy policy only.</p>
 
