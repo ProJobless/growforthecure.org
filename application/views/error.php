@@ -2,7 +2,7 @@
 
 <?php 
 	echo '<pre>';
-	print_r ($error[error]);
+	print_r ($error);
 	echo '</pre>'; 
 
 ?>
