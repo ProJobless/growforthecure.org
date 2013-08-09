@@ -180,6 +180,8 @@ class Model_users extends CI_Model {
 	function get_comments($id)
 	{
 		$this->db->where('growerID', $id);
+		$this->db->order_by("commentDate", "desc"); 
+		$this->db->order_by("id", "desc"); 
 		$query = $this->db->get('tblComments');
 
 		if ($query->num_rows() > 0) {
