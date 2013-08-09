@@ -7,7 +7,9 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="<?php echo $page_description; ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+	<meta name="msvalidate.01" content="6274B65405F8EE4FDE5A1311D552E76D" />
+	<meta name="google-site-verification" content="TYS4uHfPCV2OqdVGIPemNevumjX66tptcHF_pOfgwwc" />
+	
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/reset.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui-1.10.3.custom.css">
