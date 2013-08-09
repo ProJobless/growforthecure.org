@@ -121,12 +121,14 @@ class Notify extends CI_Controller {
 		$html_message = str_replace('[FIRSTNAME]', $payer_firstname, $html_message);
 		$html_message = str_replace('[GROWERID]', $growerid, $html_message);
 		$html_message = str_replace('[STYLE]', $data['style_name'], $html_message);
+		$html_message = str_replace('[STYLEID]', $styleid, $html_message);
 
 		$grower_html_message = str_replace('[AMOUNT]', $payer_amount, $grower_html_message);
 		$grower_html_message = str_replace('[GROWERNAME]', $grower_name, $grower_html_message);
 		$grower_html_message = str_replace('[FIRSTNAME]', $payer_firstname, $grower_html_message);
 		$grower_html_message = str_replace('[GROWERID]', $growerid, $grower_html_message);
 		$grower_html_message = str_replace('[STYLE]', $data['style_name'], $grower_html_message);
+		$grower_html_message = str_replace('[STYLEID]', $styleid, $grower_html_message);
 
 		$message = '<html><head></head>';
 		$message = $message . $html_message;
