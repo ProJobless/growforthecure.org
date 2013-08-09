@@ -45,7 +45,7 @@ function index()
 <table width="600px" align="center">
 	<tr>
 		<td style="padding:10px;font-family:helvetica,arial,sans-serif;color:black;font-size:14px;line-height:140%;">
-			<p>' . $data['first_name'] . ', a quick check of our calendar shows that your Grow for the Cure campaign will be ending tomorrow. Now would be a great time to try a last minute push for donations.</p><p>Let your friends know that it is over tomorrow, or if you really need to, log into your account and extend your grow by a few days. Either way, thank you for your help and good luck.</p><p>Click to go to your profile -> ' . base_url() . 'grower/'. $data['safe_name'] . '/' . $data['user_id'] . '</p>
+			<p>' . $data['first_name'] . ', a quick check of our calendar shows that your Grow for the Cure campaign will be ending tomorrow. Now would be a great time to try a last minute push for donations.</p><p>Let your friends know that it is over tomorrow by going to your profile and sending a Facebook message or a Tweet, or if you really need to, log into your account and extend your grow by a few days. Either way, thank you for your help and good luck.</p><p>Click to go to your profile -> ' . base_url() . 'grower/'. $data['safe_name'] . '/' . $data['user_id'] . '</p>
 		</td>
 	</tr>
 </table>
