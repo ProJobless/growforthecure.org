@@ -57,7 +57,7 @@ class Grower extends CI_Controller {
 			$data['campaign_elapsed'] = floor($seconds_diff2/3600/24);
 			$data['campaign_remaining'] = floor($seconds_diff3/3600/24) + 1;
 
-			echo $data['campaign_remaining'];
+			//echo $data['campaign_remaining'];
 
 		}	
 		$data['styles_choices'] = $this->model_users->get_active_styles_and_pledges($data['campaign_id'], $data['user_id']);

@@ -139,3 +139,4 @@ ERROR - 2013-08-09 12:33:50 --> Severity: Warning  --> Cannot modify header info
 ERROR - 2013-08-09 12:33:51 --> Severity: Warning  --> unlink(./userphotos/): Operation not permitted /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/deletephoto.php 14
 ERROR - 2013-08-09 12:33:51 --> Severity: Warning  --> unlink(./userphotos/): Operation not permitted /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/application/controllers/deletephoto.php 15
 ERROR - 2013-08-09 12:33:51 --> Severity: Warning  --> Cannot modify header information - headers already sent by (output started at /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/system/core/Exceptions.php:185) /Users/scollins/Dropbox/Projects/Current_Sites/growforthecure.org/system/helpers/url_helper.php 540
+ERROR - 2013-08-09 12:58:04 --> 404 Page Not Found --> stephen-collins
