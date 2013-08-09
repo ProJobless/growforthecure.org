@@ -69,7 +69,7 @@
 		<?php 		
 				foreach ($styles_choices as $choice) {
 
-					$paypalLink = 'https://www.sandbox.paypal.com/cgi-bin/webscr?business=paypal@lungcancerfoundation.org
+					$paypalLink = 'https://www.paypal.com/cgi-bin/webscr?business=paypal@lungcancerfoundation.org
 						&amp;cmd=_donations&rm=2
 						&amp;item_name=Support+' . urlencode($full_name) . '+of+Growforthecure.org
 						&amp;item_number=Grow+Style+' . urlencode($choice->styleName) . '&amp;currency_code=USD
