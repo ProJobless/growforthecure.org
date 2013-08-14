@@ -78,6 +78,7 @@ function index()
 			$this->db->set('dateJoined', date("Y-m-d"));
 			$this->db->insert('tblUsers');
 
+
 			$this->db->where('emailAddress', $email);
 			$query = $this->db->get('tblUsers');
 
@@ -89,6 +90,13 @@ function index()
 					$userID = $row['userID'];
 				}
 			}
+
+			$this->db->set('pledgeAmount', '0');
+			$this->db->set('userID', $userID);
+			$this->db->set('pledgeTime', Date('Y-m-d'));
+			$this->db->set('pledger', 'INITIAL PLEDGE');
+			$this->db->insert('tblPledges');
+
 
 
 			if ($secretcode) {

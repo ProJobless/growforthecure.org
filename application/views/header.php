@@ -38,7 +38,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="header inner">
-<img id="Image-Maps_22013051914350812" src="<?php echo base_url(); ?>artwork/header-donate-button.png" usemap="#Image-Maps_22013051914350812" border="0" width="610" height="152" alt="" />
+<a href="<?php echo base_url(); ?>"><img id="Image-Maps_22013051914350812" src="<?php echo base_url(); ?>artwork/header-donate-button.png" usemap="#Image-Maps_22013051914350812" border="0" width="610" height="152" alt="" /></a>
 <map id="Image-Maps_22013051914350812" name="Image-Maps_22013051914350812">
 <area shape="rect" coords="457,97,605,147" href="<?php echo base_url(); ?>donate" alt="Make a donation." title="Make a donation." />
 </map>

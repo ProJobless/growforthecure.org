@@ -739,10 +739,53 @@ ul.admin-nav li a {
 
 
 
+/* DAILY REPORT PAGES */
+
+table.daily-pledges {
+	width: 970px;
+
+}
+table.daily-pledges tr:nth-child(even) {
+	background-color: #dfdbdb;
+}
+table.daily-pledges tr:first-child {
+	font-weight: 700;
+	color: red;
+}
+table.daily-pledges tr:last-child {
+	font-weight: 700;
+	color: red;
+	border-bottom: 0px solid black;
+	background-color: transparent;
+}
+
+table.daily-pledges tr {
+	border-bottom: 1px solid black;
+}
+table.daily-pledges td {
+	padding: 10px;
+}
 
 
 
+table.new-campaigns {
+	width: 470px;
 
+}
+table.new-campaigns tr:nth-child(even) {
+	background-color: #dfdbdb;
+}
+table.new-campaigns tr:first-child {
+	font-weight: 700;
+	color: red;
+}
+
+table.new-campaigns tr {
+	border-bottom: 1px solid black;
+}
+table.new-campaigns td {
+	padding: 10px;
+}
 
 
 
