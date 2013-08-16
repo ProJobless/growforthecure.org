@@ -67,6 +67,24 @@
 		<br />
 		<div class="image-row">
 		<?php 		
+
+			if($campaign_remaining < 1) {
+				
+				// NO PAYPAL LINK. GROW IS OVER.
+
+				foreach ($styles_choices as $choice) {
+				
+					if (isset($choice->PledgeAmount)) {
+						$PA = '<span class="pledgeamount">$' . $choice->PledgeAmount . '</span>';
+					} else {
+						$PA = '';
+					}
+					echo '<div class="icon"><img width="60px" id="' . $choice->StyleID . '" alt="' . $choice->styleName . '" title="' . $choice->styleName . '" src="' . base_url() .'artwork/styles/'. $choice->fileName . '" />'  . $PA .'</div>';
+				}
+			} else {
+				
+				// PUT IN PAYPAL LINK.
+
 				foreach ($styles_choices as $choice) {
 
 					$paypalLink = 'https://www.paypal.com/cgi-bin/webscr?business=paypal@lungcancerfoundation.org
@@ -84,6 +102,7 @@
 					echo '<div class="icon"><a target="_blank" href="' . $paypalLink . '"><img width="60px" id="' . $choice->StyleID . '" alt="' . $choice->styleName . '" title="' . $choice->styleName . '" src="' . base_url() .'artwork/styles/'. $choice->fileName . '" />'  . $PA .'</a></div>';
 
 				}
+			}
 		 ?>
 		</div>
 		<br clear="all" />
